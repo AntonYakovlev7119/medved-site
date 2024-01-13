@@ -1,0 +1,35 @@
+<%-include("../__blocks/__header.ejs") %>
+
+<main class="page-content">
+  <h1 class="page-title">Контакты</h1>
+  <section class="contacts">
+    <div class="contacts-container container">
+      <p class="contacts__email">
+        <strong>Email: </strong><%= content.email %>
+      </p>
+      <p class="contacts__telephone">
+        <strong>Телефон: </strong><%= content.telephone %>
+      </p>
+      <p class="contacts__adress">
+        <strong>Адрес: </strong><%= content.adress %>
+      </p>
+    </div>
+  </section>
+
+  <section class="company-location">
+    <div class="company-location-container container">
+      <script
+        type="text/javascript"
+        charset="utf-8"
+        async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4408c31e2243f85c049a05dc9a49055b81d4c81a42dc9f4e613655cf872870eb&amp;width=auto&amp;height=auto&amp;lang=ru_RU&amp;scroll=true"
+      ></script>
+    </div>
+  </section>
+
+  <%-include("../__blocks/__cart.ejs") %>
+
+  <!-- <a class="sroll-top-button" href="#body"></a> -->
+</main>
+
+<%-include("../__blocks/__footer.ejs") %>

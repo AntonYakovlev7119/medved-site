@@ -1,0 +1,30 @@
+<%-include("../__blocks/__header.ejs") %>
+
+<main class="page-content">
+  <h1 class="page-title">Каталог</h1>
+  <section class="products">
+    <div class="products-container container">
+      <% products.forEach((product)=>{ %>
+      <div class="product" data-id="<%= product.id %>">
+        <img src="./product_images/<%= product.img %>" alt="" />
+        <div class="product__info">
+          <p class="product__title"><%= product.title %></p>
+          <div class="product__description-container">
+            <p class="product__description"><%= product.desc %></p>
+          </div>
+          <p class="product__price">
+            <strong>Цена: </strong><%= product.price %>р. м3
+          </p>
+          <a class="buy-product__button" role="button">В корзину</a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <%-include("../__blocks/__cart.ejs") %>
+
+  <!-- <a class="sroll-top-button" href="#body"></a> -->
+</main>
+
+<%-include("../__blocks/__footer.ejs") %>

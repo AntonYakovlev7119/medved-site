@@ -1,0 +1,14 @@
+/* Футер */
+
+footer {
+  min-height: 10vh;
+  background: var(--tertiary-color);
+}
+
+.copyright {
+  position: relative;
+  font-size: calc(12px + 0.4vw);
+  color: var(--nav-font-color);
+  text-align: center;
+  top: 30px;
+}

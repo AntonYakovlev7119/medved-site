@@ -1,0 +1,121 @@
+/* Продукция */
+
+.products {
+  background: var(--primary-color);
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--index) * 3);
+  padding: 60px;
+}
+
+.product {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  /* max-height: 540px; */
+  max-width: 320px;
+  padding: 10px;
+  background: transparent;
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+  border: 1px solid rgba(156, 44, 29, 0.623);
+  border-radius: 20px;
+  transition: 0.25s ease;
+  cursor: default;
+}
+
+.product:hover {
+  border: 1px solid rgb(156, 44, 29);
+  /* background: var(--secondary-color); */
+  box-shadow: 0 0 7px #8a8a8a;
+  transform: translate3d(0, -10px, 0);
+  transition: 0.4s ease;
+}
+
+.product img {
+  height: 100%;
+  max-height: 200px;
+  width: 100%;
+  margin-bottom: 15px;
+  /* padding: 10px; */
+  border-radius: 7px;
+
+  /* border: 1px solid var(--tertiary-color); */
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 90px;
+  /* border: 1px solid rgba(156, 44, 29, 0.623); */
+  border-radius: 20px;
+}
+
+.product__title {
+  font-size: calc(15px + 0.4vw);
+  font-weight: 600;
+}
+
+.product__description-container {
+  min-height: 80px;
+  /* max-height: 170px; */
+  /* height: 170px; */
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.product__description {
+  font-family: SF Pro Display;
+  font-weight: 300;
+  font-size: calc(15px + 0.2vw);
+  margin: 0 20px;
+  line-height: 1.5em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: 0.2s ease-in;
+}
+
+.product:hover .product__description {
+  -webkit-line-clamp: inherit;
+  -webkit-transition: 0.2s ease-in;
+}
+
+.product__price {
+  font-size: calc(15px + 0.3vw);
+}
+
+.product__price strong {
+  font-weight: 600;
+}
+
+.buy-product__button {
+  position: absolute;
+  font-size: calc(15px + 0.1vw);
+  padding: 12px 35px;
+  bottom: 30px;
+  color: white;
+  background: var(--btn-bg-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--btn-transition);
+}
+
+.buy-product__button:hover {
+  background: var(--btn-bg-color-hover);
+  box-shadow: 0 0 5px rgb(146, 84, 60);
+  transition: var(--btn-transition);
+}
+
+.buy-product__button:active {
+  background: var(--btn-bg-color-active);
+}

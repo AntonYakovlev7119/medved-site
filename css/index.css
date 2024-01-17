@@ -1,0 +1,533 @@
+/* Преимущества компании */
+
+.company-advantages {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 0;
+  background: var(--secondary-color);
+}
+
+.company-advantages h3 {
+  margin-bottom: 30px !important;
+}
+
+.company-advantages-container {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--index) * 5);
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.company__advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  text-align: center;
+}
+
+.company__advantage img {
+  height: calc(var(--index) * 3);
+  max-height: 250px;
+  width: auto;
+}
+
+.company__advantage span {
+  display: block;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.section-scew {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.header-scew {
+  height: 90px;
+  bottom: -90px;
+}
+
+/* О комапании */
+
+.about-company {
+  background: var(--secondary-color);
+}
+
+.about-company h2 {
+  text-align: start;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+
+.about-company__company-description {
+  font-size: calc(15px + 0.5vw);
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 0 105px;
+}
+
+/* Дрова */
+
+.wood {
+  padding: 250px 0 50px 0;
+  background: var(--primary-color);
+}
+
+.wood-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.wood-title::before {
+  content: "Колотые дрова";
+}
+
+.wood__img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 70px;
+}
+
+.wood__img img {
+  position: relative;
+  display: block;
+  height: calc(var(--index) * 18);
+  z-index: 999;
+  transition: 1s;
+}
+
+.wood__img img:hover {
+  transform: scale(1.05);
+}
+
+.wood-shadow {
+  content: "";
+  position: absolute;
+  width: 350px;
+  bottom: -20px;
+  box-shadow: 0 0 70px 15px black;
+  transition: 1s;
+  z-index: 99;
+}
+
+.wood__img:hover .wood-shadow {
+  width: 400px;
+}
+
+.wood-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45vw;
+}
+
+.wood__description {
+  display: block;
+  font-size: calc(15px + 0.5vw);
+  font-weight: 400;
+  line-height: 1.5em;
+  text-shadow: 0 0px 1px rgb(187, 187, 187);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.buy-wood__button {
+  font-size: calc(15px + 0.8vw);
+  color: var(--btn-bg-color);
+  margin-top: 30px;
+  padding: 5px 25px;
+  background: transparent;
+  border: 2px solid var(--btn-bg-color);
+  border-radius: 10px;
+  transition: var(--btn-transition);
+  cursor: pointer;
+}
+
+.buy-wood__button:hover {
+  background: var(--btn-bg-color);
+  color: var(--primary-color);
+}
+
+.wood-background-img {
+  position: absolute;
+  width: 800px;
+  right: -80px;
+  opacity: 0.3;
+}
+
+/* Древесеные изделия */
+
+.wood-products {
+  padding: 280px 0 240px 0;
+  background: var(--secondary-color);
+}
+
+.wood-products-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 5%; */
+  padding: 0 50px;
+}
+
+.wood-products-description-title::before {
+  content: "Древесные изделия";
+}
+
+.wood-products-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.wood-products-description-container {
+  position: relative;
+  /* height: 500px; */
+  height: var(--wp-height);
+  width: 100%;
+  overflow: hidden;
+}
+
+.wood-products__description::after {
+  content: "";
+  position: absolute;
+  /* height: var(--wp_height); */
+  height: 100%;
+  width: 0;
+  width: 300%;
+  top: 0;
+  right: calc(260% / -4);
+  /* right: -120px; */
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 1) 90%,
+    rgba(245, 245, 245, 0)
+  );
+  transform: skewX(-30deg);
+  /* transform: translateX(50%) skewX(-30deg); */
+  /* animation: wood-product-description-transition 1.75s linear; */
+  opacity: 0;
+  z-index: 99;
+}
+
+.wood-products__description.active::after {
+  animation: wood-product-description-transition 1.75s linear;
+}
+
+.wood-products__description {
+  position: absolute;
+  display: block;
+  font-family: "Montserrat";
+  /* font-family: Roboto; */
+  font-weight: 300;
+  font-size: calc(15px + 0.5vw);
+  line-height: 1.5em;
+  text-shadow: 0 0px 1px rgb(187, 187, 187);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  /* height: 100%; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* background: var(--secondary-color); */
+  transition: 0.8s;
+  /* overflow: hidden; */
+  /* z-index: -1; */
+  opacity: 0;
+}
+
+.wood-products__description.active {
+  /* z-index: 99; */
+
+  opacity: 1;
+}
+
+@keyframes wood-product-description-transition {
+  0% {
+    opacity: 1;
+    width: 300%;
+  }
+  /* 40% {
+    opacity: 1;
+    width: 300%;
+    transform: translateX(0) skewX(-30deg);
+  } */
+
+  100% {
+    opacity: 1;
+    width: 0;
+    transform: translateX(100%) skewX(-30deg);
+  }
+}
+
+.wood-products__description ul {
+  margin-top: 20px;
+}
+
+.buy-wood-products__button {
+  font-size: calc(15px + 0.8vw);
+  /* font-weight: 300; */
+  color: var(--btn-bg-color);
+  /* color: rgb(179 153 84); */
+  margin-top: 30px;
+  padding: 5px 25px;
+  background: transparent;
+  border: 2px solid var(--btn-bg-color);
+  border-radius: 10px;
+  transition: var(--btn-transition);
+  cursor: pointer;
+}
+
+.buy-wood-products__button:hover {
+  background: var(--btn-bg-color);
+  /* background: rgb(193 163 84); */
+  color: var(--primary-color);
+  transition: var(--btn-transition);
+}
+
+.wood-products-top-scew {
+  position: absolute;
+  max-height: 300px;
+  top: 0;
+  z-index: 9998;
+}
+
+.wood-product-right-scew {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  /* width: 800px; */
+
+  z-index: 999;
+}
+
+.wood-product-right-scew path {
+  /* fill: rgb(122, 78, 27); */
+  fill: #e7c570;
+  fill: rgb(169, 146, 60);
+  /* fill: rgb(185 160 66); */
+  fill: var(--nav-font-color-hover);
+}
+
+/* width="100%" height="100%" */
+/* fill:#800000 */
+
+/* Как заказать */
+
+.about-order {
+  position: relative;
+  background: var(--primary-color);
+  z-index: 9998;
+}
+
+.about-order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-order-title::before {
+  content: "Доставка и оплата";
+}
+
+.order-type-select {
+  background: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.order-type-select-container {
+  display: flex;
+  gap: 100px;
+}
+.order__type {
+  --text-color: rgb(102, 69, 19);
+  position: relative;
+  /* font-style: italic; */
+  font-family: Roboto;
+  font-size: calc(15px + 0.6vw);
+  font-weight: 500;
+  /* color: var(--btn-bg-color); */
+  /* color: var(--nav-font-color-hover); */
+  color: var(--text-color);
+  /* padding: 10px; */
+  /* background: var(--primary-color); */
+  background: var(--secondary-color);
+  /* box-shadow: 0 3px 15px gray; */
+  cursor: pointer;
+  z-index: 999;
+}
+
+.order__type span {
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
+  /* background: var(--primary-color); */
+}
+
+.order__type span::after,
+.order__type span::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  /* z-index: -1; */
+  transition: 0.4s ease;
+}
+
+.order__type span:hover::after,
+.order__type span:hover::before {
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+}
+
+.order__type span:hover::after {
+  /* height: 100%;
+  width: 100%; */
+  border-top: 1px solid var(--nav-font-color-hover);
+  border-left: 1px solid var(--nav-font-color-hover);
+}
+
+.order__type span:hover::before {
+  /* height: 100%;
+  width: 100%; */
+  border-bottom: 1px solid var(--nav-font-color-hover);
+  border-right: 1px solid var(--nav-font-color-hover);
+}
+
+.order__type span::after {
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 0px solid var(--nav-font-color-hover);
+  border-left: 0px solid var(--nav-font-color-hover);
+  transform: translate(-1px, -1px);
+  z-index: -1;
+}
+
+.order__type span::before {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 0px solid var(--nav-font-color-hover);
+  border-right: 0px solid var(--nav-font-color-hover);
+  transform: translate(-1px, -1px);
+  z-index: 1;
+}
+
+.order-description-container {
+  width: 50vw;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-description-container p {
+  /* font-family: Roboto; */
+  /* font-weight: 700; */
+  font-size: calc(15px + 0.5vw);
+  line-height: 1.5em;
+  /* color: var(--text-color); */
+  margin-top: 10px;
+  text-shadow: 0px 0px 1px rgb(82, 82, 82);
+}
+
+.about-order-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 260px;
+  /* background: url(../img/wood-background1.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/*  */
+
+.cargo-transportation {
+  padding: 0;
+  background: var(--secondary-color);
+}
+
+.cargo-transportation-container {
+  display: flex;
+}
+
+.cargo-transportation-title::before {
+  content: "Грузоперевозки";
+}
+
+.cargo-transportation-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  /* background: #cd9e56; */
+}
+
+.cargo-transportation-img img {
+  /* position: relative; */
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  margin: 0 70px 0 70px;
+  object-fit: cover;
+  z-index: 999;
+}
+
+.transport__svg {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+#transport__svg1 {
+}
+
+.cargo-transportation-description {
+  width: 50%;
+  margin-top: 60px;
+  padding: 50px 0;
+}
+
+.cargo-transportation-description p {
+  font-size: 22px;
+  line-height: 1.5em;
+  margin: 0 70px 0 70px;
+}
+
+.cargo-transportation-scew {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  z-index: 99;
+}
+
+/*  */
+.tree-clearing {
+  background: var(--primary-color);
+}
+.tree-clearing-container {
+}

@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.header-index-page {
+.header-main-page {
   background: var(--tertiary-color);
   /* min-height: 100vh; */
   height: 105vh;
@@ -25,6 +25,7 @@
 .header-background__parallax-img {
   position: absolute;
   background-image: url(../img/header-bg5.2.jpg);
+  background-image: url(../img/header-bg5.3.jpg);
   background-position: center;
   background-size: cover;
   transform: rotateX(var(--move-y)) rotateY(var(--move-x));
@@ -249,7 +250,7 @@ nav {
   transition: 0.25s ease-out;
 }
 
-.nav__item.active {
+.nav__item--active {
   color: var(--nav-font-color-hover);
 }
 
@@ -309,7 +310,7 @@ nav {
 
 /* Кнопка меню */
 
-.toggle-menu {
+.header__toggle-menu {
   display: none;
   position: absolute;
   width: 50px;
@@ -318,7 +319,7 @@ nav {
   right: 20px;
   cursor: pointer;
 }
-.toggle-menu span {
+.header__toggle-menu span {
   display: block;
   position: absolute;
   top: 22px;
@@ -328,8 +329,8 @@ nav {
   background: white;
   border-radius: 10px;
 }
-.toggle-menu span:before,
-.toggle-menu span:after {
+.header__toggle-menu span:before,
+.header__toggle-menu span:after {
   content: "";
   position: absolute;
   display: block;
@@ -338,11 +339,11 @@ nav {
   height: 3px;
   background: white;
 }
-.toggle-menu span:before {
+.header__toggle-menu span:before {
   top: -15px;
   border-radius: 10px;
 }
-.toggle-menu span:after {
+.header__toggle-menu span:after {
   bottom: -15px;
   border-radius: 10px;
 }

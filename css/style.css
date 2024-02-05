@@ -53,9 +53,9 @@ body {
 
 .page-layout {
   position: relative;
-  /* display: flex;
-  flex-direction: column; */
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
@@ -129,7 +129,7 @@ main.page-content {
 
 /* Кнопка прокрутки наверх */
 
-.sroll-top-button {
+.scroll-top-button {
   position: fixed;
   display: block;
   height: 50px;

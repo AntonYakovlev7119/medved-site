@@ -1,5 +1,5 @@
-const navContainer = document.querySelector(".header-nav-container");
-const toggleMenu = document.querySelector(".toggle-menu");
+const navContainer = document.querySelector(".header__navigation");
+const toggleMenu = document.querySelector(".header__toggle-menu");
 const woodProductsDescriptionContainer = document.querySelector(".wood-products-description-container");
 
 let highestWPElem = woodProductsDescriptionContainer.children.item(0);
@@ -11,15 +11,15 @@ getHighestWPElement();
 (window.onscroll = function() {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   if (scrollTop > 64) {
-    navContainer.classList.add("scrolled");
+    navContainer.classList.add("header__navigation--scrolled");
   }
   if (scrollTop < 64) {
-    navContainer.classList.remove("scrolled");
+    navContainer.classList.remove("header__navigation--scrolled");
   }
 })();
 
 toggleMenu.addEventListener("click", () => {
-  navContainer.classList.toggle("active");
+  navContainer.classList.toggle(".header__mobile-navigation--active");
 });
 
 // Отслеживание курсора

@@ -14,55 +14,48 @@
   </head>
   <body id="body">
     <div class="page-layout">
-      <header id="site-header">
-        <div class="header-nav-container">
+      <header class="header">
+        <div class="header__navigation header__navigation_flat-color">
           <nav>
-            <a class="nav__item" href="../index.html">Главная</a>
-            <a class="nav__item active" href="./catalog.html">Продукция</a>
-            <a class="nav__item" href="./contacts.html">Контакты</a>
+            <a class="header__nav-item header__nav-item--active" href="/"
+              >Главная</a
+            >
+            <a class="header__nav-item" href="./catalog.html">Продукция</a>
+            <a class="header__nav-item" href="./contacts.html">Контакты</a>
           </nav>
           <a class="header__telephone" href="tel:+79314325544">
             <span>+7 (931) 432-55-44</span>
           </a>
-          <div class="toggle-menu"><span></span></div>
+          <div class="header__toggle-menu"><span></span></div>
         </div>
-
-        
-
-        
       </header>
 
-<main class="page-content">
-  <h1 class="page-title">Каталог</h1>
-  <section class="products">
-    <div class="products-container container">
-     
-      <div class="product" data-id="1">
-        <img src="./product_images/" alt="" />
-        <div class="product__info">
-          <p class="product__title"></p>
-          <div class="product__description-container">
-            <p class="product__description"></p>
+      <main class="page-content">
+        <h1 class="page-title">Каталог</h1>
+        <section class="products">
+          <div class="products-container container">
+            <div class="product" data-id="1">
+              <img src="./product_images/" alt="" />
+              <div class="product__info">
+                <p class="product__title"></p>
+                <div class="product__description-container">
+                  <p class="product__description"></p>
+                </div>
+                <p class="product__price"><strong>Цена: </strong>1500 р. м3</p>
+                <a class="buy-product__button" role="button">В корзину</a>
+              </div>
+            </div>
           </div>
-          <p class="product__price">
-            <strong>Цена: </strong>1500 р. м3
-          </p>
-          <a class="buy-product__button" role="button">В корзину</a>
+        </section>
+
+        <!-- <a class="sroll-top-button" href="#body"></a> -->
+      </main>
+
+      <footer>
+        <div class="copyright">
+          &copy OOО"Медведь" - 2023 | Все права защищены
         </div>
-      </div>
-
+      </footer>
     </div>
-  </section>
-
-
-  <!-- <a class="sroll-top-button" href="#body"></a> -->
-</main>
-
-<footer>
-  <div class="copyright">
-    &copy OOО"Медведь" - 2023 | Все права защищены
-  </div>
-</footer>
-</div>
-</body>
+  </body>
 </html>

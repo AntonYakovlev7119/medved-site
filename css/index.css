@@ -43,13 +43,8 @@
 .section-scew {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   z-index: 99;
-}
-
-.header-scew {
-  height: 90px;
-  bottom: -90px;
 }
 
 /* О комапании */

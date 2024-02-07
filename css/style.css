@@ -82,8 +82,8 @@ h1.page-title {
   -webkit-text-stroke: 1.5px var(--btn-bg-color);
 }
 
-h2.section-title {
-  /* position: relative; */
+.title {
+  position: relative;
   display: block;
   font-family: Roboto;
   font-size: calc(32px + 1vw);
@@ -92,28 +92,31 @@ h2.section-title {
   color: var(--tertiary-color);
   margin-bottom: 40px;
   text-align: center;
-  z-index: 999;
+  /* z-index: 999; */
   /* -webkit-text-stroke: 1px rgb(214, 180, 28); */
   /* -webkit-text-stroke: 1.5px rgb(134, 111, 6); */
   /* -webkit-text-stroke: 1.5px var(--nav-font-color-hover); */
   /* -webkit-text-fill-color: transparent; */
 }
 
-h2.section-title::before {
-  /* content: "Древесные изделия"; */
+.title::before {
+  content: "Древесные изделия";
   position: absolute;
   display: block;
   font-family: Roboto;
   font-size: 1.75em;
   font-weight: 600;
+  /* color: var(--primary-color); */
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;
   transform: translate(-100px, -50px);
   opacity: 0.3;
-  z-index: -1;
+  z-index: 1;
 }
 
 .container {
+  position: relative;
+  display: flex;
   margin: 0 auto;
   /* max-width: 1920px; */
 }

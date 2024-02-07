@@ -211,7 +211,7 @@
   /* background: var(--tertiary-color); */
 }
 
-.header__navigation--scrolled::before {
+.header__navigation--scrolled.header__navigation_gradient-color::before {
   height: 135px;
 }
 

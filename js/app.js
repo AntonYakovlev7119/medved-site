@@ -2,9 +2,9 @@ const navContainer = document.querySelector(".header__navigation");
 const toggleMenu = document.querySelector(".header__toggle-menu");
 const woodProductsDescriptionContainer = document.querySelector(".wood-products-description-container");
 
-let highestWPElem = woodProductsDescriptionContainer.children.item(0);
+// let highestWPElem = woodProductsDescriptionContainer.children.item(0);
 
-getHighestWPElement();
+// getHighestWPElement();
 
 // Проверка прокрутки страницы для изменения навигации
 
@@ -35,23 +35,23 @@ document.addEventListener("mousemove", (e) => {
 
 //Поиск самого большого по высоте .wood-products__description элемента
 
-function getHighestWPElement(){
+// function getHighestWPElement(){
   
-  Array.from(woodProductsDescriptionContainer.children).forEach((elem)=> {
-  if(elem.offsetHeight > highestWPElem.offsetHeight) highestWPElem = elem;
-});
-setTimeout(()=>{
-  woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
-}, 800)
-};
+//   Array.from(woodProductsDescriptionContainer.children).forEach((elem)=> {
+//   if(elem.offsetHeight > highestWPElem.offsetHeight) highestWPElem = elem;
+// });
+// setTimeout(()=>{
+//   woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
+// }, 800)
+// };
 
 // Изменение высоты wood_products_description_container при изменении размера окна 
 
-window.onresize = ()=>{
-  setTimeout(()=>{
-    woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
-  }, 800)
+// window.onresize = ()=>{
+//   setTimeout(()=>{
+//     woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
+//   }, 800)
   
-}
+// }
 
 

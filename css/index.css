@@ -1,69 +1,8 @@
-/* Преимущества компании */
-
-.company-advantages {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 0;
-  background: var(--secondary-color);
-}
-
-.company-advantages h3 {
-  margin-bottom: 30px !important;
-}
-
-.company-advantages-container {
-  display: flex;
-  justify-content: center;
-  gap: calc(var(--index) * 5);
-  padding: 0 30px;
-  flex-wrap: wrap;
-}
-
-.company__advantage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 150px;
-  text-align: center;
-}
-
-.company__advantage img {
-  height: calc(var(--index) * 3);
-  max-height: 250px;
-  width: auto;
-}
-
-.company__advantage span {
-  display: block;
-  font-size: calc(15px + 0.2vw);
-  font-weight: 400;
-  margin-top: 5px;
-}
-
 .section-scew {
   position: absolute;
   width: 100%;
   /* height: 100%; */
   z-index: 99;
-}
-
-/* О комапании */
-
-.about-company {
-  background: var(--secondary-color);
-}
-
-.about-company h2 {
-  text-align: start;
-  margin-bottom: 40px;
-  margin-left: 80px;
-}
-
-.about-company__company-description {
-  font-size: calc(15px + 0.5vw);
-  font-weight: 400;
-  line-height: 1.5em;
-  margin: 0 105px;
 }
 
 /* Дрова */
@@ -73,16 +12,16 @@
   background: var(--primary-color);
 }
 
-.wood-container {
+.wood .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  /* gap: 5%; */
 }
 
-.wood-title::before {
+/* .wood__title::before {
   content: "Колотые дрова";
-}
+} */
 
 .wood__img {
   position: relative;
@@ -104,7 +43,7 @@
   transform: scale(1.05);
 }
 
-.wood-shadow {
+.wood__img-shadow {
   content: "";
   position: absolute;
   width: 350px;
@@ -114,15 +53,19 @@
   z-index: 99;
 }
 
-.wood__img:hover .wood-shadow {
+.wood__img:hover .wood__img-shadow {
   width: 400px;
 }
 
-.wood-description-container {
+.wood__left-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45vw;
+  width: 50%;
+}
+
+.wood__right-side {
+  width: 50%;
 }
 
 .wood__description {
@@ -131,11 +74,9 @@
   font-weight: 400;
   line-height: 1.5em;
   text-shadow: 0 0px 1px rgb(187, 187, 187);
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
-.buy-wood__button {
+.wood__button {
   font-size: calc(15px + 0.8vw);
   color: var(--btn-bg-color);
   margin-top: 30px;
@@ -147,12 +88,12 @@
   cursor: pointer;
 }
 
-.buy-wood__button:hover {
+.wood__button:hover {
   background: var(--btn-bg-color);
   color: var(--primary-color);
 }
 
-.wood-background-img {
+.wood__background-scew {
   position: absolute;
   width: 800px;
   right: -80px;
@@ -526,3 +467,64 @@
 }
 .tree-clearing-container {
 }
+
+/* О комапании */
+
+.about-company {
+  background: var(--secondary-color);
+}
+
+.about-company h2 {
+  text-align: start;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+
+.about-company__company-description {
+  font-size: calc(15px + 0.5vw);
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 0 105px;
+}
+
+/* Преимущества компании
+
+.company-advantages {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 0;
+  background: var(--secondary-color);
+}
+
+.company-advantages h3 {
+  margin-bottom: 30px !important;
+}
+
+.company-advantages-container {
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--index) * 5);
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.company__advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  text-align: center;
+}
+
+.company__advantage img {
+  height: calc(var(--index) * 3);
+  max-height: 250px;
+  width: auto;
+}
+
+.company__advantage span {
+  display: block;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 400;
+  margin-top: 5px;
+} */

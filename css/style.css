@@ -83,42 +83,36 @@ h1.page-title {
 }
 
 .title {
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
   font-family: Roboto;
   font-size: calc(32px + 1vw);
-  /* font-size: 50px; */
   font-weight: 600;
   color: var(--tertiary-color);
   margin-bottom: 40px;
   text-align: center;
-  /* z-index: 999; */
-  /* -webkit-text-stroke: 1px rgb(214, 180, 28); */
-  /* -webkit-text-stroke: 1.5px rgb(134, 111, 6); */
-  /* -webkit-text-stroke: 1.5px var(--nav-font-color-hover); */
-  /* -webkit-text-fill-color: transparent; */
+  z-index: 2;
 }
 
 .title::before {
-  content: "Древесные изделия";
   position: absolute;
   display: block;
   font-family: Roboto;
   font-size: 1.75em;
   font-weight: 600;
-  /* color: var(--primary-color); */
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;
-  transform: translate(-100px, -50px);
+  text-align: center;
+  transform: translate(0px, -50px);
   opacity: 0.3;
-  z-index: 1;
+  z-index: -1;
 }
 
 .container {
   position: relative;
   display: flex;
   margin: 0 auto;
-  /* max-width: 1920px; */
+  max-width: 1920px;
 }
 
 main.page-content {
@@ -127,7 +121,7 @@ main.page-content {
 
 .page-section {
   position: relative;
-  padding: 100px 0;
+  padding: 0 150px;
 }
 
 /* Кнопка прокрутки наверх */

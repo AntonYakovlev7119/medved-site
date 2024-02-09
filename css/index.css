@@ -8,7 +8,7 @@
 /* Дрова */
 
 .wood {
-  padding: 250px 0 50px 0;
+  padding: 250px 50px 150px 50px;
   background: var(--primary-color);
 }
 
@@ -19,9 +19,9 @@
   /* gap: 5%; */
 }
 
-/* .wood__title::before {
+.wood__title::before {
   content: "Колотые дрова";
-} */
+}
 
 .wood__img {
   position: relative;
@@ -68,6 +68,12 @@
   width: 50%;
 }
 
+.wood__description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .wood__description {
   display: block;
   font-size: calc(15px + 0.5vw);
@@ -107,62 +113,32 @@
   background: var(--secondary-color);
 }
 
-.wood-products-container {
+.wood-products .container {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* gap: 5%; */
   padding: 0 50px;
 }
 
-.wood-products-description-title::before {
-  content: "Древесные изделия";
-}
-
-.wood-products-description {
+.wood-products__left-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 60%;
+  z-index: 2;
 }
 
-.wood-products-description-container {
-  position: relative;
-  /* height: 500px; */
-  height: var(--wp-height);
-  width: 100%;
-  overflow: hidden;
-}
-
-.wood-products__description::after {
-  content: "";
-  position: absolute;
-  /* height: var(--wp_height); */
-  height: 100%;
-  width: 0;
-  width: 300%;
-  top: 0;
-  right: calc(260% / -4);
-  /* right: -120px; */
-  background: linear-gradient(
-    to left,
-    rgba(245, 245, 245, 1) 90%,
-    rgba(245, 245, 245, 0)
-  );
-  transform: skewX(-30deg);
-  /* transform: translateX(50%) skewX(-30deg); */
-  /* animation: wood-product-description-transition 1.75s linear; */
-  opacity: 0;
-  z-index: 99;
-}
-
-.wood-products__description.active::after {
-  animation: wood-product-description-transition 1.75s linear;
+.wood-products .title::before {
+  content: "Древесные изделия";
 }
 
 .wood-products__description {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wood-products__description {
+  position: relative;
   display: block;
   font-family: "Montserrat";
   /* font-family: Roboto; */
@@ -170,48 +146,19 @@
   font-size: calc(15px + 0.5vw);
   line-height: 1.5em;
   text-shadow: 0 0px 1px rgb(187, 187, 187);
-  white-space: pre-wrap;
-  word-wrap: break-word;
+
   /* height: 100%; */
   width: 100%;
   top: 0;
   left: 0;
   /* background: var(--secondary-color); */
-  transition: 0.8s;
-  /* overflow: hidden; */
-  /* z-index: -1; */
-  opacity: 0;
-}
-
-.wood-products__description.active {
-  /* z-index: 99; */
-
-  opacity: 1;
-}
-
-@keyframes wood-product-description-transition {
-  0% {
-    opacity: 1;
-    width: 300%;
-  }
-  /* 40% {
-    opacity: 1;
-    width: 300%;
-    transform: translateX(0) skewX(-30deg);
-  } */
-
-  100% {
-    opacity: 1;
-    width: 0;
-    transform: translateX(100%) skewX(-30deg);
-  }
 }
 
 .wood-products__description ul {
   margin-top: 20px;
 }
 
-.buy-wood-products__button {
+.wood-products__button {
   font-size: calc(15px + 0.8vw);
   /* font-weight: 300; */
   color: var(--btn-bg-color);
@@ -225,21 +172,25 @@
   cursor: pointer;
 }
 
-.buy-wood-products__button:hover {
+.wood-products__button:hover {
   background: var(--btn-bg-color);
   /* background: rgb(193 163 84); */
   color: var(--primary-color);
   transition: var(--btn-transition);
 }
 
-.wood-products-top-scew {
+.wood-products__right-side {
+  /* width: 50%; */
+}
+
+.wood-products__top-scew {
   position: absolute;
   max-height: 300px;
   top: 0;
   z-index: 9998;
 }
 
-.wood-product-right-scew {
+.wood-product__right-scew {
   position: absolute;
   top: 0;
   right: 0;
@@ -247,10 +198,10 @@
   width: 50%;
   /* width: 800px; */
 
-  z-index: 999;
+  z-index: 1;
 }
 
-.wood-product-right-scew path {
+.wood-product__right-scew path {
   /* fill: rgb(122, 78, 27); */
   fill: #e7c570;
   fill: rgb(169, 146, 60);
@@ -269,13 +220,13 @@
   z-index: 9998;
 }
 
-.about-order-container {
+.about-order .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-order-title::before {
+.about-order.title::before {
   content: "Доставка и оплата";
 }
 

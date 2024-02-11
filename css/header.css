@@ -158,6 +158,8 @@
   position: absolute;
   background-image: url(../img/header-bg5.2.jpg);
   background-image: url(../img/header-bg5.3.jpg);
+  /* background-image: url(../img/header-bg5.4.jpg); */
+  /* background-image: url(../img/header-bg5.5.jpg); */
   /* background-image: url(../img/header-bg6.png); */
   background-position: center;
   background-size: cover;
@@ -286,18 +288,18 @@ nav {
 }
 
 .header__telephone span::before {
-  content: "";
+  content: url(../img/free-icon-font-phone-call-5070407.svg);
   position: absolute;
   display: block;
   height: 32px;
   width: 32px;
   left: -36px;
   top: -5px;
-  background: url("../img/telephone-icon-32x32.svg");
-  background-position: center;
+  /* background: url("../img/telephone-icon-32x32.svg"); */
+  /* background-position: center;
   background-size: cover;
   background-size: 32px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   animation: 1.2s infinite telephone;
 }
 

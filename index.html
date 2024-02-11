@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="./css/slider.css">
-    <script src="./js/slider.js" defer></script> -->
     <link rel="stylesheet" href="./css/footer.css" />
     <script src="./js/app.js" defer></script>
     <title>ООО "Медведь"</title>
@@ -151,16 +144,19 @@
               <div class="wood__description-container">
                 <h2 class="wood__title title">Колотые дрова</h2>
                 <div class="wood__description">
-                  <span
+                  <span class="wood__subtitle subtitle"
                     >Древесина высокого качества без трухи, гнили и грязи!</span
                   >
-                  Дрова березовые, осиновые, ольховые
-                  <ul>
-                    <li>- Собственное производство</li>
-                    <li>- Лес зимней заготовки</li>
-                    <li>- Доставка в день заказа</li>
-                    <li>- Возможен самовывоз</li>
-                  </ul>
+                  <div class="wood__list">
+                    Дрова березовые, осиновые, ольховые
+                    <ul>
+                      <li>Собственное производство</li>
+                      <li>Лес зимней заготовки</li>
+                      <li>Доставка в день заказа</li>
+                      <li>Возможен самовывоз</li>
+                    </ul>
+                  </div>
+
                   Доставляем дрова начиная от 2 кубометров! Доставка ежедневно
                   без выходных дней, в любое удобное для Вас время,
                   предварительно согласовав день и время доставки. Для доставки
@@ -169,7 +165,7 @@
                   любое место Санкт-Петербурга и Ленинградской области.
                 </div>
                 <a class="wood__button" href="/catalog" role="button">
-                  В каталог
+                  Заказать
                 </a>
               </div>
             </div>
@@ -226,23 +222,26 @@
             <div class="wood-products__left-side text-container">
               <h2 class="wood-products__title title">Древесные изделия</h2>
               <div class="wood-products__description">
-                <p>
-                  Деревянные доски разных сортов, брусья, вырезные изделия такие
-                  как: - Пластина - Необрезанная доска - Трёхактный брус с
-                  обзолом - Строганные шпунтованные изделия
-                </p>
+                <span class="wood-products__subtitle subtitle">
+                  Мы производим различные древесные изделия выского качества
+                </span>
+                <div class="wood-products__list">
+                  <ul>
+                    <li>- Пластина</li>
+                    <li>- Необрезанная доска</li>
+                    <li>- Трёхактный брус с обзолом</li>
+                    <li>- Строганные шпунтованные изделия</li>
+                  </ul>
+                </div>
               </div>
               <a class="wood-products__button" href="/catalog" role="button">
                 В каталог
               </a>
             </div>
             <div class="wood-products__right-side">
-              <!-- <img
-                class="wood-product__img"
-                src="./img/wood-product1.jpg"
-                alt="Дрова"
-                title="Дрова"
-              /> -->
+              <div class="wood-products__img">
+                <img src="./img/wood-product1.jpg" alt="Дрова" title="Дрова" />
+              </div>
             </div>
           </div>
 
@@ -252,24 +251,20 @@
               xmlns:svg="http://www.w3.org/2000/svg"
               width="100%"
               height="100%"
-              viewBox="0 0 100 96"
+              viewBox="0 0 100.35489 130.58076"
               version="1.1"
               preserveAspectRatio="xMinYMax slice"
             >
-              <path d="M 100.35484,0 V 96.870966 H 0 L 35.48387,0 h 64.87097" />
+              <path
+                d="M 100.35489,5e-7 H 35.483911 L 6.46187e-7,96.870842 100.35489,130.58077 Z"
+              />
             </svg>
           </div>
-          <!-- style="fill:rgb(184, 177, 79)" -->
-          <!-- <div class="wood-product-right-scew">
-            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 96" version="1.1"  preserveAspectRatio="none">
-              <path style="fill:rgb(184, 177, 79)" d="M 100.35484,0 V 96.870966 H 0 L 35.48387,0 h 64.87097"/>
-            </svg>
-          </div> -->
         </section>
 
         <section class="about-order page-section">
-          <h2 class="about-order title section-title">Доставка и оплата</h2>
-          <div class="about-order container">
+          <div class="container">
+            <h2 class="about-order__title title">Доставка и оплата</h2>
             <div class="about-order__order-type-select">
               <div class="about-order__order-type-select-container">
                 <div class="order__type">

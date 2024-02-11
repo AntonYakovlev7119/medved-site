@@ -83,6 +83,7 @@ h1.page-title {
 }
 
 .title {
+  /* position: relative; */
   display: flex;
   justify-content: center;
   font-family: Roboto;
@@ -91,7 +92,7 @@ h1.page-title {
   color: var(--tertiary-color);
   margin-bottom: 40px;
   text-align: center;
-  z-index: 2;
+  z-index: 10;
 }
 
 .title::before {
@@ -153,5 +154,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(168, 158, 20);
+  background-color: #b98940;
 }

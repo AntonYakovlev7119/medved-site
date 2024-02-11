@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 5%; */
 }
 
 .wood__title::before {
@@ -82,10 +81,77 @@
   text-shadow: 0 0px 1px rgb(187, 187, 187);
 }
 
+.wood__subtitle {
+  position: relative;
+  /* margin-left: 40px; */
+}
+
+.wood__subtitle::before {
+  /* position: absolute;
+  content: url(../img/wood-cut.png);
+  height: 60px;
+  width: 60px;
+  left: -50px; */
+}
+
+.subtitle {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.subtitle::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: -8px;
+  /* background: var(--btn-bg-color); */
+  background: rgb(167, 117, 11);
+  border-radius: 10px;
+}
+
+.subtitle::before {
+  position: absolute;
+  content: "\\ \\";
+  font-size: 1.1em;
+  font-weight: 800;
+  color: rgb(167, 117, 11);
+  letter-spacing: -3px;
+  left: -35px;
+}
+
+.wood__list {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.wood__list ul {
+  font-style: italic;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+.wood__list li {
+  position: relative;
+}
+
+.wood__list li::before {
+  position: absolute;
+  content: "\2714";
+  height: 50px;
+  width: 55px;
+  left: -25px;
+  color: rgb(167, 117, 11);
+  /* background: black; */
+}
+
 .wood__button {
   font-size: calc(15px + 0.8vw);
   color: var(--btn-bg-color);
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 5px 25px;
   background: transparent;
   border: 2px solid var(--btn-bg-color);
@@ -180,7 +246,24 @@
 }
 
 .wood-products__right-side {
+  position: relative;
   /* width: 50%; */
+  z-index: 3;
+}
+
+.wood-products__img {
+  /* border: 6px solid rgb(167, 117, 11); */
+  border: 6px solid;
+  border-image: linear-gradient(rgb(167, 117, 11), rgb(243, 183, 53)) 1;
+  /* box-shadow: 0 0 30px 10px rgb(117, 90, 30); */
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+.wood-products__img img {
+  display: block;
+  width: 600px;
 }
 
 .wood-products__top-scew {
@@ -192,41 +275,38 @@
 
 .wood-product__right-scew {
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
-  height: 100%;
-  width: 50%;
+  height: 140%;
+  width: 45%;
   /* width: 800px; */
-
-  z-index: 1;
+  overflow: visible;
+  z-index: 2;
 }
 
 .wood-product__right-scew path {
-  /* fill: rgb(122, 78, 27); */
-  fill: #e7c570;
-  fill: rgb(169, 146, 60);
-  /* fill: rgb(185 160 66); */
   fill: var(--nav-font-color-hover);
+  width: 800px;
 }
-
-/* width="100%" height="100%" */
-/* fill:#800000 */
 
 /* Как заказать */
 
 .about-order {
-  position: relative;
+  /* position: relative; */
   background: var(--primary-color);
-  z-index: 9998;
+  /* z-index: 1; */
 }
 
 .about-order .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 150px;
+  z-index: 3;
 }
 
-.about-order.title::before {
+.about-order__title::before {
   content: "Доставка и оплата";
 }
 

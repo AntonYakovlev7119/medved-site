@@ -51,7 +51,7 @@
   height: 100%;
   width: 80%;
   left: 100%;
-  opacity: 0.65;
+  opacity: 0.75;
   z-index: 99;
 }
 
@@ -163,11 +163,17 @@
   /* background-image: url(../img/header-bg6.png); */
   background-position: center;
   background-size: cover;
-  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  /* left: var(--move-x);
+  top: var(--move-y); */
+  will-change: left top;
+  /* transform: rotateX(var(--move-y)) rotateY(var(--move-x)); */
+  transform: translateY(var(--move-y)) translateX(var(--move-x));
   will-change: transform;
-  transition: transform 1.5s cubic-bezier(0.05, 0.5, 0, 1);
-  inset: -7vw;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 2s cubic-bezier(0.05, 0.5, 0, 1);
+  /* inset: -7vw; */
+  /* object-fit: cover; */
 }
 
 /* навигация */
@@ -271,7 +277,20 @@ nav {
 
 .header__telephone {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
   flex-grow: 0;
+}
+
+.header__telephone i {
+  position: absolute;
+  display: block;
+  font-size: 28px;
+  color: var(--nav-font-color-hover);
+  left: -36px;
+  top: -5px;
+  animation: 1.5s infinite telephone;
 }
 
 .header__telephone span {
@@ -288,19 +307,25 @@ nav {
 }
 
 .header__telephone span::before {
-  content: url(../img/free-icon-font-phone-call-5070407.svg);
+  /* content: url(../img/free-icon-font-phone-call-5070407.svg); */
+  content: "";
   position: absolute;
   display: block;
   height: 32px;
   width: 32px;
   left: -36px;
   top: -5px;
-  /* background: url("../img/telephone-icon-32x32.svg"); */
+  background: url("../img/free-icon-font-phone-call-5070407.svg");
   /* background-position: center;
   background-size: cover;
   background-size: 32px;
   background-repeat: no-repeat; */
+
   animation: 1.2s infinite telephone;
+}
+
+.header__telephone span::before path {
+  fill: var(--nav-font-color-hover);
 }
 
 .header__bottom-scew {
@@ -370,14 +395,28 @@ nav {
 
 @keyframes telephone {
   0% {
-    background-size: 32px;
+    height: 32px;
+    width: 32px;
   }
 
   50% {
-    background-size: 28px;
+    height: 28px;
+    width: 28px;
   }
 
   100% {
-    background-size: 32px;
+    height: 32px;
+    width: 32px;
   }
+  /* 0% {
+    font-size: 28px;
+  }
+
+  50% {
+    font-size: 25px;
+  }
+
+  100% {
+    font-size: 28px;
+  } */
 }

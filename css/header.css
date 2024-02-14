@@ -139,6 +139,7 @@
   margin-right: calc(var(--index) * 1);
   margin-left: calc(var(--index) * 10);
   /* margin-left: calc(1vw * 20); */
+  cursor: default;
 }
 
 /* фоновая картинка */

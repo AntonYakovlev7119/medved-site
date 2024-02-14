@@ -60,11 +60,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 45%;
 }
 
 .wood__right-side {
-  width: 50%;
+  width: 55%;
 }
 
 .wood__description-container {
@@ -105,7 +105,7 @@
   position: absolute;
   content: "";
   height: 3px;
-  width: 100%;
+  width: 98%;
   left: 0;
   bottom: -8px;
   /* background: var(--btn-bg-color); */
@@ -181,7 +181,6 @@
 
 .wood-products .container {
   position: relative;
-  display: flex;
   padding: 0 50px;
 }
 
@@ -247,23 +246,26 @@
 
 .wood-products__right-side {
   position: relative;
-  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
   z-index: 3;
 }
 
 .wood-products__img {
   /* border: 6px solid rgb(167, 117, 11); */
-  border: 6px solid;
-  border-image: linear-gradient(rgb(167, 117, 11), rgb(243, 183, 53)) 1;
-  /* box-shadow: 0 0 30px 10px rgb(117, 90, 30); */
+  border: 6px solid rgb(167, 117, 11);
+  box-shadow: 0 0 30px 10px rgb(117, 90, 30);
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  /* rgb(167, 117, 11), rgb(243, 183, 53) */
 }
 
 .wood-products__img img {
   display: block;
-  width: 600px;
+  width: 500px;
 }
 
 .wood-products__top-scew {
@@ -303,6 +305,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 150px;
+  padding-bottom: 150px;
   z-index: 3;
 }
 
@@ -397,35 +400,47 @@
   z-index: 1;
 }
 
-.order-description-container {
-  width: 50vw;
+.about-order__description {
+  counter-reset: p;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.order-description-container p {
+.about-order__description p {
+  position: relative;
   /* font-family: Roboto; */
   /* font-weight: 700; */
   font-size: calc(15px + 0.5vw);
   line-height: 1.5em;
   /* color: var(--text-color); */
-  margin-top: 10px;
+  padding: 20px;
   text-shadow: 0px 0px 1px rgb(82, 82, 82);
+  -webkit-box-shadow: 0px 5px 8px 1px rgba(47, 65, 77, 0.2);
+  -moz-box-shadow: 0px 5px 8px 1px rgba(47, 65, 77, 0.2);
+  box-shadow: 0px 5px 8px 1px rgba(47, 65, 77, 0.2);
+  background: var(--secondary-color);
+  border-radius: 20px;
+  cursor: default;
 }
 
-.about-order-background {
+.about-order__description p::before {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 260px;
-  /* background: url(../img/wood-background1.jpg); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.1;
-  z-index: -1;
+  display: block;
+  counter-increment: p;
+  content: counter(p);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--nav-font-color);
+  top: -15px;
+  left: -10px;
+  padding: 5px 12px 5px 8px;
+  background: var(--nav-font-color-hover);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 /*  */
@@ -435,15 +450,15 @@
   background: var(--secondary-color);
 }
 
-.cargo-transportation-container {
-  display: flex;
+.cargo-transportation .container {
+  z-index: 1;
 }
 
-.cargo-transportation-title::before {
+.cargo-transportation__title::before {
   content: "Грузоперевозки";
 }
 
-.cargo-transportation-img {
+.cargo-transportation__img {
   position: relative;
   display: flex;
   align-items: center;
@@ -453,7 +468,7 @@
   /* background: #cd9e56; */
 }
 
-.cargo-transportation-img img {
+.cargo-transportation__img img {
   /* position: relative; */
   display: block;
   width: 700px;
@@ -473,19 +488,19 @@
 #transport__svg1 {
 }
 
-.cargo-transportation-description {
+.cargo-transportation__description {
   width: 50%;
   margin-top: 60px;
   padding: 50px 0;
 }
 
-.cargo-transportation-description p {
+.cargo-transportation__description p {
   font-size: 22px;
   line-height: 1.5em;
   margin: 0 70px 0 70px;
 }
 
-.cargo-transportation-scew {
+.cargo-transportation__scew {
   position: absolute;
   height: 120px;
   width: 100%;

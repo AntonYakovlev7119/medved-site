@@ -103,7 +103,7 @@
 
 .subtitle::after {
   position: absolute;
-  content: "";
+  /* content: ""; */
   height: 3px;
   width: 98%;
   left: 0;
@@ -272,7 +272,7 @@
   position: absolute;
   max-height: 300px;
   top: 0;
-  z-index: 9998;
+  z-index: 1;
 }
 
 .wood-product__right-scew {
@@ -425,6 +425,7 @@
   box-shadow: 0px 5px 8px 1px rgba(47, 65, 77, 0.2);
   background: var(--secondary-color);
   border-radius: 20px;
+  transition: 0.3s;
   cursor: default;
 }
 
@@ -441,6 +442,10 @@
   padding: 5px 12px 5px 8px;
   background: var(--nav-font-color-hover);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.about-order__description p:hover {
+  transform: translateY(-10px);
 }
 
 /*  */

@@ -47,7 +47,7 @@ html {
 
 body {
   height: 100%;
-
+  color: var(--tertiary-color);
   /* font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif; */
 }
 
@@ -83,7 +83,7 @@ h1.page-title {
 }
 
 .title {
-  /* position: relative; */
+  position: relative;
   display: flex;
   justify-content: center;
   font-family: Roboto;
@@ -104,6 +104,8 @@ h1.page-title {
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;
   text-align: center;
+  white-space: nowrap;
+  margin-left: 20px;
   transform: translate(0px, -50px);
   opacity: 0.3;
   z-index: -1;
@@ -114,6 +116,7 @@ h1.page-title {
   display: flex;
   margin: 0 auto;
   max-width: 1920px;
+  /* z-index: 2; */
 }
 
 main.page-content {

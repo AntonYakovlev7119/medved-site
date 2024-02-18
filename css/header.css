@@ -164,17 +164,12 @@
   /* background-image: url(../img/header-bg6.png); */
   background-position: center;
   background-size: cover;
-  /* left: var(--move-x);
-  top: var(--move-y); */
-  will-change: left top;
-  /* transform: rotateX(var(--move-y)) rotateY(var(--move-x)); */
   transform: translateY(var(--move-y)) translateX(var(--move-x));
   will-change: transform;
   height: 100%;
   width: 100%;
   transition: transform 2s cubic-bezier(0.05, 0.5, 0, 1);
   /* inset: -7vw; */
-  /* object-fit: cover; */
 }
 
 /* навигация */
@@ -315,7 +310,7 @@ nav {
   height: 32px;
   width: 32px;
   left: -36px;
-  top: -5px;
+  top: -3px;
   background: url("../img/free-icon-font-phone-call-5070407.svg");
   /* background-position: center;
   background-size: cover;

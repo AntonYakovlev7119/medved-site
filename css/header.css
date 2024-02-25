@@ -150,26 +150,26 @@
   width: 105vw;
   top: 0;
   left: 0;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+  /* transform-style: preserve-3d; */
+  /* perspective: 1000px; */
   z-index: 1;
 }
 
 .header__background-img {
   position: absolute;
   background-image: url(../img/header-bg5.2.jpg);
-  background-image: url(../img/header-bg5.3.jpg);
+  /* background-image: url(../img/header-bg4.jpg); */
   /* background-image: url(../img/header-bg5.4.jpg); */
   /* background-image: url(../img/header-bg5.5.jpg); */
   /* background-image: url(../img/header-bg6.png); */
   background-position: center;
   background-size: cover;
-  transform: translateY(var(--move-y)) translateX(var(--move-x));
+  transform: translate3d(var(--move-x), var(--move-y), 0);
   will-change: transform;
   height: 100%;
   width: 100%;
   transition: transform 2s cubic-bezier(0.05, 0.5, 0, 1);
-  /* inset: -7vw; */
+  /* inset: -2vw; */
 }
 
 /* навигация */

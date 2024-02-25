@@ -4,7 +4,7 @@
   --secondary-color: rgb(245, 245, 245);
   --tertiary-color: rgb(39, 39, 39);
   /* --quaternary-color: rgb(156, 44, 29); */
-  --quaternary-color: rgb(138, 35, 21);
+  --quaternary-color: rgb(145, 49, 4);
   --primary-font-color: rgb(206, 206, 206);
   --secondary-font-color: rgb(39, 39, 39);
   --nav-font-color: #fff;
@@ -13,6 +13,8 @@
   /* --nav-font-color-hover: rgb(160, 125, 27); */
   /* --nav-font-color-hover: rgb(161, 123, 77); */
   --nav-font-color-hover: #a17738;
+  --nav-font-color-hover: #b68740;
+  /* --nav-font-color-hover: #a7750b; */
   /* --nav-font-color-hover: #cf9443; */
   --nav-font-border-color: rgb(107, 100, 0);
   --nav-transition: 0.5s ease;
@@ -36,19 +38,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
-  /* font-family: SF Pro Display; */
 }
 
 html {
   height: 100%;
+  font-size: calc(15px + 0.4vw);
   scroll-behavior: smooth;
 }
 
 body {
   height: 100%;
+  font-family: "Montserrat";
+
+  font-weight: 400;
   color: var(--tertiary-color);
-  /* font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif; */
 }
 
 .page-layout {
@@ -71,9 +74,9 @@ a {
 
 h1.page-title {
   font-family: "SF Pro Display";
-  font-size: calc(40px + 3vw);
+  /* font-size: calc(40px + 3vw); */
   /* font-size: calc(22px + 1vw); */
-
+  font-size: 5rem;
   font-weight: 400;
   padding-top: 40px;
   text-align: center;
@@ -87,7 +90,8 @@ h1.page-title {
   display: flex;
   justify-content: center;
   font-family: Roboto;
-  font-size: calc(32px + 1vw);
+  /* font-size: calc(32px + 1vw); */
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--tertiary-color);
   margin-bottom: 40px;
@@ -105,10 +109,25 @@ h1.page-title {
   -webkit-text-fill-color: transparent;
   text-align: center;
   white-space: nowrap;
-  margin-left: 20px;
-  transform: translate(0px, -50px);
+  transform: translate(0, -42px);
   opacity: 0.3;
   z-index: -1;
+}
+
+.button {
+  font-size: 1.2rem;
+  color: var(--btn-bg-color);
+  padding: 5px 25px;
+  background: transparent;
+  border: 2px solid var(--btn-bg-color);
+  border-radius: 10px;
+  transition: var(--btn-transition);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--btn-bg-color);
+  color: var(--primary-color);
 }
 
 .container {
@@ -157,5 +176,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #b98940;
+  background-color: #d69e4a;
 }

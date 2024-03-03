@@ -326,7 +326,10 @@ nav {
 
 .header__bottom-scew {
   /* position: relative; */
+  /* display: none; */
   height: 90px;
+  width: 100%;
+  left: 0;
   bottom: -90px;
 }
 

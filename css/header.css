@@ -105,7 +105,7 @@
   left: 0;
   background-color: var(--tertiary-color);
   opacity: 0.4;
-  z-index: 99;
+  z-index: 1;
 }
 
 /* .header__right-side::after {
@@ -121,25 +121,53 @@
 
 .header__site-description {
   position: absolute;
-  display: block;
-  width: 100%;
-  font-family: "Montserrat";
-  font-weight: 500;
-  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  width: auto;
+  right: calc(var(--index) * 1);
+  left: calc(var(--index) * 10);
+  z-index: 2;
 }
 
 .header__site-description span {
   display: block;
-  font-size: calc(14px + 0.8vw);
+  font-family: "Montserrat";
   font-weight: 600;
   line-height: 1.5em;
+  letter-spacing: 1px;
   color: rgb(238, 238, 238);
   /* max-width: 1325px; */
   text-shadow: 0 0 10px rgb(48, 48, 48);
-  margin-right: calc(var(--index) * 1);
-  margin-left: calc(var(--index) * 10);
-  /* margin-left: calc(1vw * 20); */
+
   cursor: default;
+}
+
+.header__site-description a {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  top: -5px;
+  right: 30px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  border-bottom-right-radius: 4px;
+  transform: rotate(45deg);
+  will-change: transform;
+  animation: 1.1s header-arrow linear infinite;
+}
+
+.header__site-description a::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  right: 8px;
+  bottom: 8px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  /* border-bottom-right-radius: 5px; */
 }
 
 /* фоновая картинка */
@@ -225,10 +253,15 @@
 }
 
 nav {
+  flex-grow: 0.5;
+}
+
+menu {
   display: flex;
   justify-content: flex-end;
-  gap: 60px;
-  flex-grow: 0.5;
+  /* gap: 60px; */
+  /* gap: 40px; */
+  gap: calc(var(--index) * 2);
 }
 
 .header__nav-item {
@@ -238,7 +271,9 @@ nav {
   flex-direction: column;
   /* justify-content: flex-end; */
   align-items: center;
-  font-size: var(--nav__item-font-size);
+  /* font-size: var(--nav__item-font-size); */
+  /* font-weight: 500; */
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--nav-font-color);
   /* padding: 5px 10px; */
@@ -285,12 +320,13 @@ nav {
   font-size: 28px;
   color: var(--nav-font-color-hover);
   left: -36px;
-  top: -5px;
+  top: -2px;
+  will-change: transform;
   animation: 1.5s infinite telephone;
 }
 
 .header__telephone span {
-  font-size: calc(15px + 0.3vw);
+  font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 1px;
   color: white;
@@ -304,7 +340,7 @@ nav {
 
 .header__telephone span::before {
   /* content: url(../img/free-icon-font-phone-call-5070407.svg); */
-  content: "";
+  /* content: ""; */
   position: absolute;
   display: block;
   height: 32px;
@@ -393,7 +429,7 @@ nav {
 /* --------------------------------------------- */
 
 @keyframes telephone {
-  0% {
+  /* 0% {
     height: 32px;
     width: 32px;
   }
@@ -406,16 +442,31 @@ nav {
   100% {
     height: 32px;
     width: 32px;
-  }
-  /* 0% {
-    font-size: 28px;
+  } */
+  0% {
+    /* font-size: 28px; */
+    transform: scale(1);
   }
 
   50% {
-    font-size: 25px;
+    /* font-size: 25px; */
+    transform: scale(1.1);
   }
 
   100% {
-    font-size: 28px;
-  } */
+    /* font-size: 28px; */
+    transform: scale(1);
+  }
+}
+
+@keyframes header-arrow {
+  0% {
+    transform: rotate(45deg) translate(-5px, 10px);
+  }
+  50% {
+    transform: rotate(45deg) translate(-3px, 12px);
+  }
+  100% {
+    transform: rotate(45deg) translate(-5px, 10px);
+  }
 }

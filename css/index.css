@@ -682,11 +682,21 @@
   margin: 0 70px 0 70px;
 }
 
-.cargo-transportation__scew {
+/* .cargo-transportation__scew {
   position: absolute;
   height: 120px;
   width: 100%;
   z-index: 99;
+} */
+
+.cargo-transportation__top-scew {
+  position: absolute;
+  /* display: none; */
+  /* height: 50px; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 /*  */

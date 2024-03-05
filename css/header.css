@@ -146,19 +146,24 @@
 
 .header__site-description a {
   position: relative;
-  height: 40px;
-  width: 40px;
+  display: block;
   top: -5px;
   right: 30px;
-  border-right: 3px solid white;
-  border-bottom: 3px solid white;
-  border-bottom-right-radius: 4px;
-  transform: rotate(45deg);
   will-change: transform;
   animation: 1.1s header-arrow linear infinite;
 }
 
-.header__site-description a::before {
+.header__site-description a > span {
+  height: 40px;
+  width: 40px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  border-bottom-right-radius: 4px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.header__site-description a > span::before {
   position: absolute;
   content: "";
   height: 15px;
@@ -322,7 +327,7 @@ menu {
   left: -36px;
   top: -2px;
   will-change: transform;
-  animation: 1.5s infinite telephone;
+  animation: 1.5s infinite header-telephone;
 }
 
 .header__telephone span {
@@ -353,7 +358,7 @@ menu {
   background-size: 32px;
   background-repeat: no-repeat; */
 
-  animation: 1.2s infinite telephone;
+  animation: 1.2s infinite header-telephone;
 }
 
 .header__telephone span::before path {
@@ -428,45 +433,28 @@ menu {
 
 /* --------------------------------------------- */
 
-@keyframes telephone {
-  /* 0% {
-    height: 32px;
-    width: 32px;
-  }
-
-  50% {
-    height: 28px;
-    width: 28px;
-  }
-
-  100% {
-    height: 32px;
-    width: 32px;
-  } */
+@keyframes header-telephone {
   0% {
-    /* font-size: 28px; */
     transform: scale(1);
   }
 
   50% {
-    /* font-size: 25px; */
     transform: scale(1.1);
   }
 
   100% {
-    /* font-size: 28px; */
     transform: scale(1);
   }
 }
 
 @keyframes header-arrow {
   0% {
-    transform: rotate(45deg) translate(-5px, 10px);
+    transform: translate(0px, 0px);
   }
   50% {
-    transform: rotate(45deg) translate(-3px, 12px);
+    transform: translate(0px, 5px);
   }
   100% {
-    transform: rotate(45deg) translate(-5px, 10px);
+    transform: translate(0px, 0px);
   }
 }

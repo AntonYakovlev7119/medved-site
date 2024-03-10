@@ -1,10 +1,7 @@
 const navContainer = document.querySelector(".header__navigation");
 const toggleMenu = document.querySelector(".header__toggle-menu");
-const woodProductsDescriptionContainer = document.querySelector(".wood-products-description-container");
-
-// let highestWPElem = woodProductsDescriptionContainer.children.item(0);
-
-// getHighestWPElement();
+const headerBackground = document.querySelector(".header__background");
+const treeClearingImg = document.querySelector(".tree-clearing__background");
 
 // Проверка прокрутки страницы для изменения навигации
 
@@ -25,11 +22,7 @@ toggleMenu.addEventListener("click", () => {
 // Отслеживание курсора
 
 document.addEventListener("mousemove", (e) => {
-  Object.assign(document.documentElement, {
-    // style: `
-		// --move-x: ${(e.clientX - window.innerWidth / 2) * -0.01}deg;
-		// --move-y: ${(e.clientY - window.innerHeight / 2) * 0.015}deg;
-		// `,
+  Object.assign(headerBackground, {
     style: `
 		--move-x: ${(e.clientX - window.innerWidth / 2) * 0.05}px;
 		--move-y: ${(e.clientY - window.innerHeight / 2) * 0.025}px;
@@ -37,25 +30,12 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-//Поиск самого большого по высоте .wood-products__description элемента
+// Отслеживание прокрутки
 
-// function getHighestWPElement(){
-  
-//   Array.from(woodProductsDescriptionContainer.children).forEach((elem)=> {
-//   if(elem.offsetHeight > highestWPElem.offsetHeight) highestWPElem = elem;
-// });
-// setTimeout(()=>{
-//   woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
-// }, 800)
-// };
+window.addEventListener("scroll", (e)=>{
+  treeClearingImg.style.cssText = `--scrollTop: ${this.scrollY}px`;
+})
 
-// Изменение высоты wood_products_description_container при изменении размера окна 
-
-// window.onresize = ()=>{
-//   setTimeout(()=>{
-//     woodProductsDescriptionContainer.style.cssText = `--wp-height: ${highestWPElem.offsetHeight}px`;
-//   }, 800)
-  
-// }
-
-
+// window.addEventListener("scroll", (e)=>{
+//   Object.assign(document.documentElement, {style: `--scrollTop: ${this.scrollY}px`}
+//   )});

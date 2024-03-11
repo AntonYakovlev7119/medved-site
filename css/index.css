@@ -745,7 +745,9 @@
   height: 100%;
   width: 100%;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
-  top: -190%;
+  /* top: -190%; */
+  /* top: -200%; */
+  top: -2200px;
   left: 0;
   z-index: -1;
 }

@@ -1,7 +1,11 @@
 /* Контакты */
 
-.contacts {
+main {
+  padding-top: 80px;
   background: var(--primary-color);
+}
+
+.contacts {
 }
 
 .contacts-container {

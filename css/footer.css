@@ -1,6 +1,10 @@
 /* Футер */
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
   min-height: 10vh;
   background: var(--tertiary-color);
 }
@@ -9,6 +13,6 @@ footer {
   position: relative;
   font-size: calc(12px + 0.4vw);
   color: var(--nav-font-color);
-  text-align: center;
-  top: 30px;
+  /* text-align: center; */
+  /* top: 30px; */
 }

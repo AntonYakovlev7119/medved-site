@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  flex: 0 0 auto;
   background: var(--tertiary-color);
 }
 

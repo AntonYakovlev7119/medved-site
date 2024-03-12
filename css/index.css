@@ -638,7 +638,7 @@
 }
 
 .cargo-transportation .container {
-  background: var(--light-wood);
+  /* background: var(--light-wood); */
   z-index: 1;
 }
 

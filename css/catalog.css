@@ -1,5 +1,9 @@
 /* Продукция */
 
+:root {
+  --product-gap: 25px;
+}
+
 main {
   padding-top: 80px;
   background: var(--light-wood);
@@ -13,7 +17,7 @@ main {
   flex-wrap: wrap;
   /* justify-content: center; */
   /* gap: calc(var(--index) * 1); */
-  /* gap: 25px; */
+  gap: 25px;
   padding: 60px 30px 60px 30px;
   max-width: 1400px;
   width: 100%;
@@ -25,11 +29,14 @@ main {
   /* min-height: 450px; */
   flex: 0 0 25%;
   height: 100%;
-  max-width: 25%;
+  max-width: calc(25% - var(--product-gap));
   /* max-height: 540px; */
   /* max-width: 320px; */
-  padding: 20px;
+  padding: 10px;
   /* margin: 0 10px; */
+  background: var(--light-wood);
+  border: 2px solid var(--wood);
+  border-radius: 20px;
 
   /* border: 1px solid rgba(0, 0, 0, 0.3); */
   /* border: 2px solid var(--wood);

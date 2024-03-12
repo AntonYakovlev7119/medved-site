@@ -2,7 +2,7 @@
 
 main {
   padding-top: 80px;
-  background: var(--primary-color);
+  background: var(--light-wood);
 }
 
 .contacts {
@@ -31,7 +31,7 @@ main {
 
 .company-location {
   padding-top: 50px;
-  background: var(--primary-color);
+  background: var(--light-wood);
 }
 
 .company-location-container {

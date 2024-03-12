@@ -1,29 +1,29 @@
 :root {
   --index: calc(1vh + 1vw);
-  --primary-color: rgb(245, 235, 226);
-  --secondary-color: rgb(245, 245, 245);
-  --tertiary-color: rgb(39, 39, 39);
+  --light-wood: rgb(245, 235, 226);
+  --light: rgb(245, 245, 245);
+  --dark: rgb(39, 39, 39);
   /* --quaternary-color: rgb(156, 44, 29); */
   --quaternary-color: rgb(145, 49, 4);
-  --primary-font-color: rgb(206, 206, 206);
-  --secondary-font-color: rgb(39, 39, 39);
-  --nav-font-color: #fff;
-  /* --nav-font-color-hover: rgb(141 132 16); */
-  /* --nav-font-color-hover: rgb(169, 146, 60); */
-  /* --nav-font-color-hover: rgb(160, 125, 27); */
-  /* --nav-font-color-hover: rgb(161, 123, 77); */
-  --nav-font-color-hover: #a17738;
-  --nav-font-color-hover: #b68740;
-  /* --nav-font-color-hover: #a7750b; */
-  /* --nav-font-color-hover: #cf9443; */
-  --nav-font-border-color: rgb(107, 100, 0);
+  /* --primary-font-color: rgb(206, 206, 206); */
+  --white: #fff;
+  /* --wood: rgb(141 132 16); */
+  /* --wood: rgb(169, 146, 60); */
+  /* --wood: rgb(160, 125, 27); */
+  /* --wood: rgb(161, 123, 77); */
+  /* --wood: #a17738;
+  --wood: #b68740; */
+  --wood: #b68740;
+  /* --wood: #a7750b; */
+  /* --wood: #cf9443; */
+  /* --nav-font-border-color: rgb(107, 100, 0); */
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
-  /* --btn-bg-color: rgb(165, 115, 54); */
-  --btn-bg-color: rgb(145, 102, 49);
-  /* --btn-bg-color-hover: rgb(197, 137, 64); */
-  --btn-bg-color-hover: rgb(185 160 66);
-  --btn-bg-color-active: rgb(150, 105, 51);
+  /* --dark-wood: rgb(165, 115, 54); */
+  --dark-wood: rgb(145, 102, 49);
+  /* --dark-wood-hover: rgb(197, 137, 64); */
+  /* --dark-wood-hover: rgb(185 160 66);
+  --dark-wood-active: rgb(150, 105, 51); */
   --header-inner-padding-top-desktop: 64px;
   --header-inner-padding-top-mobile: 80px;
   --header-inner-padding-bottom-desktop: 80px;
@@ -50,8 +50,8 @@ body {
   height: 100%;
   font-family: "Montserrat";
   font-weight: 400;
-  color: var(--tertiary-color);
-  background: var(--tertiary-color);
+  color: var(--dark);
+  background: var(--dark);
 }
 
 .page-layout {
@@ -80,9 +80,9 @@ h1.page-title {
   font-weight: 400;
   padding-top: 25px;
   padding-left: 50px;
-  background: var(--primary-color);
+  background: var(--light-wood);
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--btn-bg-color);
+  -webkit-text-stroke: 1.5px var(--dark-wood);
 }
 
 .title {
@@ -93,7 +93,7 @@ h1.page-title {
   /* font-size: calc(32px + 1vw); */
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--tertiary-color);
+  color: var(--dark);
   margin-bottom: 40px;
   text-align: center;
   z-index: 10;
@@ -116,18 +116,18 @@ h1.page-title {
 
 .button {
   font-size: 1.2rem;
-  color: var(--btn-bg-color);
+  color: var(--dark-wood);
   padding: 5px 25px;
   background: transparent;
-  border: 2px solid var(--btn-bg-color);
+  border: 2px solid var(--dark-wood);
   border-radius: 10px;
   transition: var(--btn-transition);
   cursor: pointer;
 }
 
 .button:hover {
-  background: var(--btn-bg-color);
-  color: var(--primary-color);
+  background: var(--dark-wood);
+  color: var(--light-wood);
 }
 
 .container {
@@ -166,13 +166,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--tertiary-color);
+  background: var(--dark);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--nav-font-color-hover);
+  background-color: var(--wood);
   border-radius: 20px;
-  border: 3px solid var(--tertiary-color);
+  border: 3px solid var(--dark);
 }
 
 body::-webkit-scrollbar-thumb:hover {

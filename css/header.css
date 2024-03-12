@@ -1,11 +1,11 @@
 .header {
   position: relative;
   flex: 0 0 auto;
-  background: var(--tertiary-color);
+  background: var(--dark);
 }
 
 .header-main-page {
-  /* background: var(--tertiary-color); */
+  /* background: var(--dark); */
   /* min-height: 100vh; */
   height: 105vh;
   min-height: 700px;
@@ -26,7 +26,7 @@
   height: 90px;
   width: 100%;
   top: 0;
-  /* background-color: var(--tertiary-color); */
+  /* background-color: var(--dark); */
   opacity: 0.9;
 }
 
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  /* background: var(--tertiary-color); */
+  /* background: var(--dark); */
   background: rgb(39, 39, 39, 0.9);
   background: linear-gradient(
     to right,
@@ -57,7 +57,7 @@
 }
 
 .header__left-side-scew path {
-  fill: var(--tertiary-color);
+  fill: var(--dark);
 }
 
 .header__logo {
@@ -104,7 +104,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--tertiary-color);
+  background-color: var(--dark);
   opacity: 0.4;
   z-index: 1;
 }
@@ -115,7 +115,7 @@
   height: 100%;
   width: 100%;
   top: 0;
-  background-color: var(--tertiary-color);
+  background-color: var(--dark);
   opacity: 0.6;
   z-index: 2;
 } */
@@ -231,7 +231,7 @@
 }
 
 .header__navigation_flat-color {
-  background: var(--tertiary-color);
+  background: var(--dark);
 }
 
 .header__navigation_gradient-color::before {
@@ -246,7 +246,7 @@
 }
 
 .header__navigation--scrolled {
-  /* background: var(--tertiary-color); */
+  /* background: var(--dark); */
 }
 
 .header__navigation--scrolled.header__navigation_gradient-color::before {
@@ -281,7 +281,7 @@ menu {
   /* font-weight: 500; */
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--nav-font-color);
+  color: var(--white);
   /* padding: 5px 10px; */
   padding: 5px;
   border: 1px solid transparent;
@@ -289,13 +289,13 @@ menu {
 }
 
 .header__nav-item:hover {
-  color: var(--nav-font-color-hover);
+  color: var(--wood);
   /* border: 1px solid var(--nav-font-border-color); */
   transition: 0.25s ease-out;
 }
 
 .header__nav-item--active {
-  color: var(--nav-font-color-hover);
+  color: var(--wood);
 }
 
 .header__nav-item::after {
@@ -304,7 +304,7 @@ menu {
   height: 2px;
   width: 0;
   bottom: 2px;
-  background: var(--nav-font-color-hover);
+  background: var(--wood);
   transition: 0.2s;
 }
 
@@ -324,7 +324,7 @@ menu {
   position: absolute;
   display: block;
   font-size: 28px;
-  color: var(--nav-font-color-hover);
+  color: var(--wood);
   left: -36px;
   top: -2px;
   will-change: transform;
@@ -340,7 +340,7 @@ menu {
 }
 
 .header__telephone span:hover {
-  color: var(--nav-font-color-hover);
+  color: var(--wood);
   transition: 0.25s ease-out;
 }
 
@@ -363,7 +363,7 @@ menu {
 }
 
 .header__telephone span::before path {
-  fill: var(--nav-font-color-hover);
+  fill: var(--wood);
 }
 
 .header__bottom-scew {

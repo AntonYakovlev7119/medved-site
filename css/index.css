@@ -702,15 +702,15 @@
   /* height: 50px; */
 
   width: 100%;
-  top: -85px;
+  top: 0;
   /* top: -290px; */
   left: 0;
   z-index: 2;
 }
 
 .cargo-transportation__top-scew path {
-  fill: var(--dark);
-  fill: var(--light-wood);
+  /* fill: var(--light-wood); */
+  fill: var(--light);
 }
 
 /*  */
@@ -784,14 +784,32 @@
 .tree-clearing__top-scew {
   position: absolute;
   /* height: 220px; */
+  height: 80px;
   width: 100%;
   /* top: -65px; */
   top: 0;
   left: 0;
   z-index: 1;
 }
+
 .tree-clearing__top-scew path {
   fill: var(--light-wood);
+}
+
+.tree-clearing__bottom-scew {
+  position: absolute;
+  height: 80px;
+  /* height: 100%; */
+  width: 100%;
+  /* top: -65px; */
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.tree-clearing__bottom-scew path {
+  fill: var(--light-wood);
+  fill: var(--light);
 }
 
 /* Преимущества компании

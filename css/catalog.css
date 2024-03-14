@@ -18,8 +18,8 @@ main {
   /* justify-content: center; */
   /* gap: calc(var(--index) * 1); */
   gap: 25px;
-  padding: 60px 30px 60px 30px;
-  max-width: 1800px;
+  padding: 60px 0px 60px 0px;
+  max-width: 1400px;
   width: 100%;
 }
 

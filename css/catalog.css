@@ -97,6 +97,7 @@ main {
 
 .catalog__product-card-description p {
   /* font-family: SF Pro Display; */
+  font-family: Roboto;
   font-weight: 400;
   font-size: 0.8em;
   margin: 0 20px;

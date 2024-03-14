@@ -18,7 +18,8 @@
   /* --wood: #cf9443; */
   /* --nav-font-border-color: rgb(107, 100, 0); */
   --nav-transition: 0.5s ease;
-  --btn-transition: 0.35s ease;
+  /* --btn-transition: 0.35s; */
+  --btn-transition: 0.5s;
   /* --dark-wood: rgb(165, 115, 54); */
   --dark-wood: rgb(145, 102, 49);
   /* --dark-wood-hover: rgb(197, 137, 64); */
@@ -73,7 +74,7 @@ a {
   color: var(--secondary-font-color);
 }
 
-h1.page-title {
+/* h1.page-title {
   font-family: Roboto;
   font-style: italic;
   font-size: 3rem;
@@ -83,6 +84,18 @@ h1.page-title {
   background: var(--light-wood);
   color: transparent;
   -webkit-text-stroke: 1.5px var(--dark-wood);
+} */
+
+h1.page-title {
+  display: block;
+  font-family: Roboto;
+  /* font-style: italic; */
+  font-size: 2rem;
+  font-weight: 600;
+  /* padding-top: 25px;
+  padding-left: 50px; */
+  margin-top: 50px;
+  text-align: center;
 }
 
 .title {
@@ -115,19 +128,42 @@ h1.page-title {
 }
 
 .button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   color: var(--dark-wood);
   padding: 5px 25px;
   background: transparent;
   border: 2px solid var(--dark-wood);
   border-radius: 10px;
-  transition: var(--btn-transition);
+  transition: color var(--btn-transition) ease;
+  overflow: hidden;
   cursor: pointer;
+  z-index: 2;
 }
 
 .button:hover {
+  transition: background 0s 0.3s, color var(--btn-transition) ease;
   background: var(--dark-wood);
-  color: var(--light-wood);
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  height: 0px;
+  width: 0px;
+  background: var(--dark-wood);
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.button:hover::after {
+  height: 10rem;
+  width: 10rem;
+  transition: var(--btn-transition);
 }
 
 .container {
@@ -152,13 +188,14 @@ main.page-content {
 .scroll-top-button {
   position: fixed;
   display: block;
-  height: 50px;
-  width: 50px;
-  bottom: 20px;
+  height: 70px;
+  width: 70px;
+  bottom: 80px;
   right: 20px;
-  background-color: black;
+  background: var(--dark);
   cursor: pointer;
   transition: all 0.2s;
+  z-index: 10;
 }
 
 body::-webkit-scrollbar {

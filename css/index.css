@@ -211,7 +211,8 @@
   bottom: -8px;
 
   /* background: var(--dark-wood); */
-  background: rgb(167, 117, 11);
+  /* background: rgb(167, 117, 11); */
+  background: var(--wood);
   /* border-radius: 10px; */
   /* border-radius: ; */
 }
@@ -222,6 +223,7 @@
   font-size: 1.1em;
   font-weight: 800;
   color: rgb(167, 117, 11);
+  color: var(--wood);
   letter-spacing: -3px;
   left: -28px;
 }
@@ -248,6 +250,7 @@
   width: 55px;
   left: -25px;
   color: rgb(167, 117, 11);
+  color: var(--wood);
   /* background: black; */
 }
 
@@ -380,6 +383,7 @@
 
 .wood-products__bottom-scew {
   bottom: -1px;
+  z-index: 1;
 }
 
 .wood-products__bottom-scew svg {
@@ -772,10 +776,7 @@
 
 .tree-clearing__top-scew {
   position: absolute;
-  /* height: 220px; */
-  height: 80px;
   width: 100%;
-  /* top: -65px; */
   top: 0;
   left: 0;
   z-index: 1;

@@ -14,6 +14,7 @@
   /* --wood: #a17738;
   --wood: #b68740; */
   --wood: #b68740;
+
   /* --wood: #a7750b; */
   /* --wood: #cf9443; */
   /* --nav-font-border-color: rgb(107, 100, 0); */
@@ -22,6 +23,7 @@
   --btn-transition: 0.5s;
   /* --dark-wood: rgb(165, 115, 54); */
   --dark-wood: rgb(145, 102, 49);
+  /* --dark-wood: rgb(207 159 56); */
   /* --dark-wood-hover: rgb(197, 137, 64); */
   /* --dark-wood-hover: rgb(185 160 66);
   --dark-wood-active: rgb(150, 105, 51); */
@@ -102,7 +104,7 @@ h1.page-title {
   position: relative;
   display: flex;
   justify-content: center;
-  font-family: Roboto;
+  font-family: "Roboto";
   /* font-size: calc(32px + 1vw); */
   font-size: 1.8rem;
   font-weight: 600;
@@ -115,10 +117,11 @@ h1.page-title {
 .title::before {
   position: absolute;
   display: block;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 1.75em;
   font-weight: 600;
-  -webkit-text-stroke: 1.5px rgb(134, 111, 6);
+  /* -webkit-text-stroke: 1.5px rgb(134, 111, 6); */
+  -webkit-text-stroke: 1.5px var(--wood);
   -webkit-text-fill-color: transparent;
   text-align: center;
   white-space: nowrap;
@@ -188,14 +191,25 @@ main.page-content {
 .scroll-top-button {
   position: fixed;
   display: block;
-  height: 70px;
-  width: 70px;
+  /* height: 70px;
+  width: 70px; */
+  /* height: 100%; */
+  width: 65px;
   bottom: 80px;
   right: 20px;
-  background: var(--dark);
+  /* background: var(--dark); */
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s;
   z-index: 10;
+}
+
+.scroll-top-button img {
+  height: 100%;
+  width: 65px;
+  height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
 }
 
 body::-webkit-scrollbar {

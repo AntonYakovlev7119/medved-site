@@ -174,11 +174,15 @@ main {
   border-radius: 4px;
 }
 
-.catalog__product-card-price span {
+.catalog__product-card-price > span {
   display: inline-block;
   font-weight: 600;
   vertical-align: middle;
   transform: skewX(-15deg);
+}
+
+.catalog__product-card-price-unit {
+  font-style: normal;
 }
 
 .buy-product__button {

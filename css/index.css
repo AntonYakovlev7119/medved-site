@@ -624,9 +624,9 @@
 /*  */
 
 .cargo-transportation {
-  padding: 0;
+  padding: 40px 0 0 0;
   background: var(--light);
-
+  overflow: hidden;
   z-index: 2;
 }
 
@@ -647,6 +647,8 @@
   height: 100vh;
   width: 50%;
   /* background: #cd9e56; */
+
+  z-index: 5;
 }
 
 .cargo-transportation__img img {
@@ -661,19 +663,26 @@
 
 .cargo-transportation__svg {
   position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 3;
+  height: 110%;
+  top: -10%;
+  left: -20%;
+
+  /* z-index: 3; */
+}
+
+.cargo-transportation__svg svg {
+  overflow: visible;
 }
 
 #transport__svg1 {
 }
 
 .cargo-transportation__description {
+  position: relative;
   width: 50%;
   margin-top: 60px;
   padding: 50px 0;
+  z-index: 3;
 }
 
 .cargo-transportation__description p {

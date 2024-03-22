@@ -72,3 +72,51 @@
       </div>
       <% }) %>
     </div>
+
+    <!-- <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 1120.3691 1140.1987"
+                  fill="var(--wood)"
+                  version="1.1"
+                  preserveAspectRatio="xMinYMin slice"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 214.58416,0 H 672.42972 L 1120.3692,906.79756 214.58416,1140.1987 0,355.45571 Z"
+                    style="opacity: 0.3"
+                  />
+                  <path
+                    d="m 193.75078,34.510213 h 413.3946 L 1011.5956,853.26931 193.75078,1064.0102 0,355.45571 Z"
+                    style="opacity: 0.3"
+                  />
+                  <path
+                    d="M 173.143,68.646713 H 542.568 L 904,800.32071 173.143,988.64671 0,355.45571 Z"
+                  />
+                </svg> -->
+
+                <!-- <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 1038 1081"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMinYMin meet"
+                >
+                  <g clip-path="url(#clip0_393_40)">
+                    <path
+                      d="M-85 0H582.5L1038 921.5L-85 1209.5V0Z"
+                      fill="#CD9E56"
+                      fill-opacity="0.3"
+                    />
+                    <path
+                      d="M0 0H515.5L959 899.482L0 1146.5V0Z"
+                      fill="#CD9E56"
+                      fill-opacity="0.3"
+                    />
+                    <path
+                      d="M-0.404221 0H433.998L859 859.717L-0.404221 1081L-204 337L-0.404221 0Z"
+                      fill="#CD9E56"
+                    />
+                  </g>
+                </svg> -->

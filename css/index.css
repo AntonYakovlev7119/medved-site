@@ -639,38 +639,47 @@
   content: "Грузоперевозки";
 }
 
-.cargo-transportation__img {
+.cargo-transportation__left {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 50%;
   /* background: #cd9e56; */
 
+  z-index: 1;
+}
+
+.cargo-transportation__img {
+  position: relative;
   z-index: 5;
 }
 
 .cargo-transportation__img img {
-  /* position: relative; */
   display: block;
   width: 700px;
   max-width: 100%;
-  margin: 0 70px 0 70px;
+  /* padding: 0 70px 0 70px; */
   object-fit: cover;
-  z-index: 999;
 }
 
 .cargo-transportation__svg {
   position: absolute;
+  /* height: 600px; */
+  /* height: auto; */
   height: 110%;
+  width: 120%;
+  /* width: auto; */
   top: -10%;
   left: -20%;
 
-  /* z-index: 3; */
+  z-index: 3;
 }
 
 .cargo-transportation__svg svg {
+  /* height: 100%;
+  width: 100%; */
   overflow: visible;
 }
 

@@ -624,7 +624,7 @@
 /*  */
 
 .cargo-transportation {
-  padding: 40px 0 0 0;
+  padding: 40px 0 50px 0;
   background: var(--light);
   overflow: hidden;
   z-index: 2;
@@ -632,6 +632,12 @@
 
 .cargo-transportation .container {
   /* background: var(--light-wood); */
+  /* height: 50vw; */
+  /* max-height: 1000px; */
+  /* height: 100%; */
+  min-height: 100%;
+  /* max-height: 50vw; */
+  max-height: 100%;
   z-index: 1;
 }
 
@@ -644,7 +650,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* height: 50vw;
+  max-height: 1000px; */
   width: 50%;
   /* background: #cd9e56; */
 
@@ -653,14 +660,17 @@
 
 .cargo-transportation__img {
   position: relative;
+  padding: 0 calc(100px - 1vw);
   z-index: 5;
 }
 
 .cargo-transportation__img img {
   display: block;
-  width: 700px;
-  max-width: 100%;
+  /* width: 700px;
+  max-width: 100%; */
   /* padding: 0 70px 0 70px; */
+  width: 100%;
+  max-width: 700px;
   object-fit: cover;
 }
 
@@ -689,13 +699,13 @@
 .cargo-transportation__description {
   position: relative;
   width: 50%;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   padding: 50px 0;
   z-index: 3;
 }
 
 .cargo-transportation__description p {
-  font-size: 22px;
+  /* font-size: 22px; */
   line-height: 1.5em;
   margin: 0 70px 0 70px;
 }
@@ -716,7 +726,7 @@
   top: 0;
   /* top: -290px; */
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .cargo-transportation__top-scew path {
@@ -736,6 +746,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding: 100px 0 120px 0;
   /* z-index: 2; */
 }
 
@@ -747,7 +758,7 @@
 
 .tree-clearing__title {
   color: var(--white);
-  margin-top: 120px;
+  /* margin-top: 120px; */
   margin-bottom: 0px;
 }
 

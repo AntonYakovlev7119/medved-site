@@ -132,6 +132,7 @@
   /* width: 100%; */
   width: auto;
   /* right: calc(var(--index)); */
+  margin-right: 10px;
   left: calc(var(--index) * 10);
   z-index: 2;
 }
@@ -140,7 +141,7 @@
   display: block;
   font-family: "Montserrat";
   font-weight: 600;
-  /* font-size: 1.1rem; */
+  font-size: 1.1rem;
   line-height: 1.5em;
   letter-spacing: 1px;
   color: rgb(238, 238, 238);

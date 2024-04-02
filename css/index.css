@@ -359,6 +359,7 @@
 }
 
 .wood-products__img {
+  margin-left: 50px;
   /* border: 6px solid rgb(167, 117, 11); */
   border: 6px solid rgb(167, 117, 11);
   box-shadow: 0 0 12px 3px rgb(117, 90, 30);
@@ -643,6 +644,7 @@
 
 .cargo-transportation {
   padding: 40px 0 50px 0;
+  padding: 80px 0 50px 0;
   background: var(--light);
   overflow: hidden;
   z-index: 2;
@@ -654,6 +656,7 @@
   /* max-height: 1000px; */
   /* height: 100%; */
   min-height: 100%;
+  min-height: 50vw;
   /* max-height: 50vw; */
   max-height: 100%;
   z-index: 1;
@@ -670,6 +673,7 @@
   justify-content: center;
   /* height: 50vw;
   max-height: 1000px; */
+  /* height: 100%; */
   width: 50%;
   /* background: #cd9e56; */
 
@@ -678,7 +682,10 @@
 
 .cargo-transportation__img {
   position: relative;
-  padding: 0 calc(100px - 1vw);
+  padding: 0 calc(50% - 20vw);
+  /* margin-left: 30px; */
+  /* padding: 0 30px; */
+  /* margin-left: calc(var(--index) * 3); */
   z-index: 5;
 }
 
@@ -688,18 +695,18 @@
   max-width: 100%; */
   /* padding: 0 70px 0 70px; */
   width: 100%;
+  /* width: calc(var(--index) * 20); */
   max-width: 700px;
   object-fit: cover;
 }
 
 .cargo-transportation__svg {
   position: absolute;
-  /* height: 600px; */
   /* height: auto; */
-  height: 110%;
-  width: 120%;
+  /* height: 100%; */
+  width: 100%;
   /* width: auto; */
-  top: -10%;
+  /* top: -10%; */
   left: -20%;
 
   z-index: 3;
@@ -716,6 +723,11 @@
 
 .cargo-transportation__description {
   position: relative;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  height: 100%;
   width: 50%;
   /* margin-top: 60px; */
   padding: 50px 0;
@@ -735,6 +747,16 @@
   z-index: 99;
 } */
 
+/* .cargo-transportation-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: -1;
+} */
+
 .cargo-transportation__top-scew {
   position: absolute;
   /* display: none; */
@@ -744,7 +766,7 @@
   top: 0;
   /* top: -290px; */
   left: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .cargo-transportation__top-scew path {
@@ -788,7 +810,7 @@
   /* top: -190%; */
   /* top: -200%; */
   top: -2100px;
-  top: -270vh;
+  /* top: -270vh; */
   left: 0;
   z-index: -1;
 }

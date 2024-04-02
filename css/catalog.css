@@ -38,6 +38,7 @@ main {
   /* border: 1px solid rgba(0, 0, 0, 0.3); */
   /* border: 2px solid var(--wood);
   border-radius: 20px; */
+  overflow: hidden;
   transition: 0.25s ease;
   cursor: default;
 }
@@ -52,6 +53,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
+  /* padding: 10px; */
 }
 
 .catalog__product-card img {
@@ -81,7 +83,8 @@ main {
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
-  text-align: center;
+  margin-left: 30px;
+  /* text-align: center; */
   width: 100%;
 }
 
@@ -90,7 +93,7 @@ main {
   content: "";
   width: 3px;
   height: 100%;
-  left: 0px;
+  left: -15px;
   background: rgb(189, 60, 28);
 }
 
@@ -116,7 +119,7 @@ main {
 
 .catalog__product-card-description::after {
   position: absolute;
-  content: "";
+  /* content: ""; */
   height: 1px;
   width: 95%;
   left: 2.5%;
@@ -127,12 +130,12 @@ main {
 }
 /* p */
 .catalog__product-card-description ul {
-  font-family: Roboto;
-  font-weight: 400;
+  font-family: "Roboto";
+  /* font-weight: 400;
   font-size: 0.8em;
-  font-style: italic;
+  font-style: italic; */
   color: var(--dark-wood);
-  list-style: disc inside;
+  /* list-style: ">" inside; */
   /* margin: 0 20px; */
   /* padding: 0 20px; */
   line-height: 1.5em;
@@ -145,14 +148,23 @@ main {
 }
 
 .catalog__product-card-description li {
+  font-family: "Franklin Gothic Medium", "Roboto", sans-serif;
+  font-weight: 500;
+  /* font-size: 1.2em; */
+  list-style: ">" inside;
 }
 
 .catalog__product-card-description span {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 0.8em;
+  font-style: italic;
   color: var(--dark);
 }
 
 .catalog__product-card-price {
   position: relative;
+  align-self: flex-start;
   font-size: 0.8em;
   font-weight: 700;
   /* font-size: calc(15px + 0.3vw); */
@@ -160,18 +172,18 @@ main {
   /* color: var(--dark-wood); */
   color: #fff;
   color: var(--light-wood);
-  padding: 5px 15px;
+  padding: 8px 45px 8px 45px;
   bottom: 0;
   background: rgb(189, 60, 28);
   background: var(--dark-wood);
-  transform: skewX(15deg);
-  border-radius: 4px;
+  transform: skewX(-25deg) translateX(-30px);
+  border-radius: 5px;
 }
 
 .catalog__product-card-price > span {
   display: inline-block;
   vertical-align: middle;
-  transform: skewX(-15deg);
+  transform: skewX(25deg);
 }
 
 .catalog__product-card-price-unit {

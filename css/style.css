@@ -45,7 +45,7 @@
 
 html {
   height: 100%;
-  font-size: calc(15px + 0.4vw);
+  font-size: calc(14px + 0.4vw);
   scroll-behavior: smooth;
 }
 
@@ -90,7 +90,7 @@ a {
 
 h1.page-title {
   display: block;
-  font-family: Roboto;
+  font-family: "Roboto";
   /* font-style: italic; */
   font-size: 2rem;
   font-weight: 600;

@@ -191,20 +191,35 @@
 
 .subtitle {
   position: relative;
-
-  /* font-size: 1.1em; */
+  display: inline-block;
+  font-size: 1.1em;
   font-weight: 700;
   margin-left: 30px;
 }
 
 .subtitle span {
+  color: var(--red);
+}
+
+.subtitle::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 102%;
+  left: -1%;
+  bottom: -8px;
+  background: var(--wood);
+}
+
+/* ------- */
+.subtitle span {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .subtitle span::after {
   position: absolute;
-  content: "";
+  /* content: ""; */
   height: 2px;
   width: 102%;
   left: -1%;
@@ -216,16 +231,17 @@
   /* border-radius: 10px; */
   /* border-radius: ; */
 }
-
+/* ----------- */
 .subtitle::before {
   position: absolute;
   content: "\\ \\";
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   font-weight: 800;
   color: rgb(167, 117, 11);
   color: var(--wood);
   letter-spacing: -3px;
-  left: -28px;
+  bottom: 0;
+  left: -25px;
 }
 
 .wood__list {
@@ -354,8 +370,10 @@
 
 .wood-products__img img {
   display: block;
-  max-width: 100%;
-  width: 600px;
+  /* max-width: 100%;
+  width: 600px; */
+  max-width: 600px;
+  width: 100%;
 }
 
 .wood-products__top-scew {
@@ -769,7 +787,8 @@
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
   /* top: -190%; */
   /* top: -200%; */
-  top: -2200px;
+  top: -2100px;
+  top: -270vh;
   left: 0;
   z-index: -1;
 }

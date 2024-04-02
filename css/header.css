@@ -50,7 +50,9 @@
 .header__left-side-scew {
   position: absolute;
   height: 100%;
-  width: 80%;
+  /* width: 80%; */
+  /* width: 270px; */
+  width: 40vh;
   left: 100%;
   opacity: 0.75;
   z-index: 99;
@@ -129,7 +131,7 @@
   align-items: center;
   /* width: 100%; */
   width: auto;
-  right: calc(var(--index) * 1);
+  /* right: calc(var(--index)); */
   left: calc(var(--index) * 10);
   z-index: 2;
 }
@@ -138,7 +140,7 @@
   display: block;
   font-family: "Montserrat";
   font-weight: 600;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   line-height: 1.5em;
   letter-spacing: 1px;
   color: rgb(238, 238, 238);

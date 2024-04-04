@@ -207,11 +207,16 @@ main.page-content {
   height: 55px;
 }
 
-.scroll-top-button__arrow {
+.scroll-top-button__arrows {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.scroll-top-button__arrow {
+  position: absolute;
   height: 15px;
   width: 48px;
   background: url("../img/svg/scroll-top-button__arrow2.svg") no-repeat;
@@ -220,11 +225,25 @@ main.page-content {
 }
 
 .scroll-top-button:hover .scroll-top-button__arrow {
+  /* animation: 1s linear 0.25s infinite scroll-top-button; */
+}
+
+.scroll-top-button:hover .scroll-top-button__top-arrow {
+  transform: translate3d(0, -16px, 0);
+  animation: 1s linear 0.5s infinite scroll-top-button;
+}
+
+.scroll-top-button__middle-arrow {
   animation: 1s linear 0.25s infinite scroll-top-button;
 }
 
-.scroll-top-button__arrow::after,
-.scroll-top-button__arrow::before {
+.scroll-top-button:hover .scroll-top-button__bottom-arrow {
+  transform: translate3d(0, 16px, 0);
+  animation: 1s linear infinite scroll-top-button;
+}
+
+/* .scroll-top-button__arrow,
+.scroll-top-button__arrow {
   position: absolute;
   display: block;
   content: "";
@@ -235,18 +254,7 @@ main.page-content {
   transition: 0.3s;
   opacity: 1;
   z-index: 10;
-}
-
-.scroll-top-button:hover .scroll-top-button__arrow::after {
-  transform: translate3d(0, -16px, 0);
-  /* animation: 1s linear 0.5s infinite scroll-top-button; */
-  /* animation-delay: 4.5s !important; */
-}
-
-.scroll-top-button:hover .scroll-top-button__arrow::before {
-  transform: translate3d(0, 16px, 0);
-  /* animation: 1s linear infinite scroll-top-button; */
-}
+} */
 
 .scroll-top-button__top {
   position: absolute;

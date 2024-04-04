@@ -191,14 +191,10 @@ main.page-content {
 .scroll-top-button {
   position: fixed;
   display: flex;
-  /* align-items: flex-end; */
   align-items: center;
   justify-content: center;
   height: 40px;
   width: 70px;
-  /* height: 100%; */
-  /* height: 45px;
-  width: 65px; */
   bottom: 80px;
   right: 20px;
   background: var(--dark);
@@ -207,41 +203,24 @@ main.page-content {
   z-index: 999;
 }
 
+.scroll-top-button:hover {
+  height: 55px;
+}
+
 .scroll-top-button__arrow {
   position: relative;
-  height: 12px;
-  width: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../img/svg/scroll-top-button__arrow.svg") no-repeat;
-  background-size: cover;
+  height: 15px;
+  width: 48px;
+  background: url("../img/svg/scroll-top-button__arrow2.svg") no-repeat;
   background-position: center;
+  transition: 0.3s;
 }
 
-.scroll-top-button__arrow img {
-  height: 30px;
-  width: 30px;
-
-  /* transform: rotate(-45deg) skewX(20deg); */
-  /* border-top: 3px solid var(--white);
-  border-right: 3px solid var(--white); */
-
-  display: block;
-  height: 12px;
-  width: 52px;
-  /* object-fit: cover; */
-  height: 100%;
-  width: 100%;
-  /* height: 27px;
-  width: 27px;
-  top: 10px;
-  transform: rotate(-45deg) skew(20deg, 20deg);
-  border-top: 4px solid var(--white);
-  border-right: 4px solid var(--white); */
-
-  /* clip-path: polygon(1.923% 92.308%, 50% 15.385%, 98.077% 92.308%); */
-  /* background: var(--white); */
+.scroll-top-button:hover .scroll-top-button__arrow {
+  animation: 1s linear 0.25s infinite scroll-top-button;
 }
 
 .scroll-top-button__arrow::after,
@@ -249,51 +228,32 @@ main.page-content {
   position: absolute;
   display: block;
   content: "";
-  /* content: url("../img/svg/scroll-top-button__arrow.svg"); */
-  /* height: 12px; */
-  /* height: 100%; */
-  background: url("../img/svg/scroll-top-button__arrow.svg") no-repeat;
-  /* background-size: cover; */
+  height: 15px;
+  background: url("../img/svg/scroll-top-button__arrow2.svg") no-repeat;
   background-position: center;
   width: 100%;
-  /* width: auto; */
-  /* width: 48px; */
-  /* top: 0;
-  left: 0; */
+  transition: 0.3s;
+  opacity: 1;
   z-index: 10;
 }
 
-.scroll-top-button__arrow::after {
-  /* top: -15px; */
-  /* top: -16px; */
+.scroll-top-button:hover .scroll-top-button__arrow::after {
+  transform: translate3d(0, -16px, 0);
+  /* animation: 1s linear 0.5s infinite scroll-top-button; */
+  /* animation-delay: 4.5s !important; */
 }
 
-.scroll-top-button__arrow::before {
-  /* bottom: 22px; */
+.scroll-top-button:hover .scroll-top-button__arrow::before {
+  transform: translate3d(0, 16px, 0);
+  /* animation: 1s linear infinite scroll-top-button; */
 }
-
-.scroll-top-button:hover {
-  height: 55px;
-  /* height: 7%; */
-}
-
-.scroll-top-button:hover .scroll-top-button__arrow {
-  /* top: 10px; */
-}
-
-/* .scroll-top-button img {
-  display: block;
-  height: 50px;
-} */
 
 .scroll-top-button__top {
   position: absolute;
   height: 15px;
-  /* height: 35%; */
   width: 100%;
   top: -14px;
   left: 0;
-  /* clip-path: polygon(35.0002px 0px, 70px 14px, 0px 14px, 35.0002px 0px); */
   clip-path: polygon(
     35.0002px 0px,
     70px 14px,
@@ -360,4 +320,16 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: #d69e4a;
+}
+
+@keyframes scroll-top-button {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -191,6 +191,7 @@ main.page-content {
 .scroll-top-button {
   position: fixed;
   display: flex;
+  /* display: none; */
   align-items: center;
   justify-content: center;
   height: 40px;
@@ -198,13 +199,29 @@ main.page-content {
   bottom: 80px;
   right: 20px;
   background: var(--dark);
+  box-shadow: 0 3px 10px 15px black;
+  box-shadow: 0px 6px 11px 4px #737373;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: height 0.2s, opacity 0.5s, transform 0.3s;
+  /* transform: translate3d(100px, 0, 0); */
+  transform: translate3d(0, 120px, 0);
+  opacity: 0;
   z-index: 999;
 }
 
 .scroll-top-button:hover {
   height: 55px;
+}
+
+.scroll-top-button--show {
+  display: flex;
+  transition: transform 0.3s;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.scroll-top-button--clicked {
+  animation: 0.5s scroll-top-button linear infinite;
 }
 
 .scroll-top-button__arrows {
@@ -230,16 +247,16 @@ main.page-content {
 
 .scroll-top-button:hover .scroll-top-button__top-arrow {
   transform: translate3d(0, -16px, 0);
-  animation: 1s linear 0.5s infinite scroll-top-button;
+  animation: 1.5s linear 0.5s infinite scroll-top-button__arrow;
 }
 
-.scroll-top-button__middle-arrow {
-  animation: 1s linear 0.25s infinite scroll-top-button;
+.scroll-top-button:hover .scroll-top-button__middle-arrow {
+  animation: 1.5s linear 0.25s infinite scroll-top-button__arrow;
 }
 
 .scroll-top-button:hover .scroll-top-button__bottom-arrow {
   transform: translate3d(0, 16px, 0);
-  animation: 1s linear infinite scroll-top-button;
+  animation: 1.5s linear infinite scroll-top-button__arrow;
 }
 
 /* .scroll-top-button__arrow,
@@ -258,6 +275,7 @@ main.page-content {
 
 .scroll-top-button__top {
   position: absolute;
+  display: block;
   height: 15px;
   width: 100%;
   top: -14px;
@@ -330,14 +348,26 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #d69e4a;
 }
 
-@keyframes scroll-top-button {
+@keyframes scroll-top-button__arrow {
   0% {
     opacity: 1;
   }
-  50% {
+  33% {
+    width: 40px;
     opacity: 0;
+  }
+  66% {
+    width: 48px;
+    opacity: 1;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes scroll-top-button {
+  to {
+    transform: translate3d(0, -300px, 0);
+    opacity: 0;
   }
 }

@@ -2,6 +2,7 @@ const navContainer = document.querySelector(".header__navigation");
 const toggleMenu = document.querySelector(".header__toggle-menu");
 const headerBackground = document.querySelector(".header__background");
 const treeClearingImg = document.querySelector(".tree-clearing__background");
+const scrollTopButton = document.querySelector(".scroll-top-button");
 
 // Проверка прокрутки страницы для изменения навигации
 
@@ -33,9 +34,23 @@ document.addEventListener("mousemove", (e) => {
 // Отслеживание прокрутки
 
 window.addEventListener("scroll", (e)=>{
-  treeClearingImg.style.cssText = `--scrollTop: ${this.scrollY}px`;
-})
+  const scrollY = this.scrollY || document.documentElement.scrollTop;
 
-// window.addEventListener("scroll", (e)=>{
-//   Object.assign(document.documentElement, {style: `--scrollTop: ${this.scrollY}px`}
-//   )});
+  treeClearingImg.style.cssText = `--scrollTop: ${scrollY}px`;
+
+ if(scrollY >= 800){
+  scrollTopButton.classList.add("scroll-top-button--show");
+  setTimeout(()=>{
+    scrollTopButton.classList.remove("scroll-top-button--clicked");
+  }, 500)
+
+}
+  else scrollTopButton.classList.remove("scroll-top-button--show");
+});
+
+// Нажатие кнопки скролла на верх сайта
+
+scrollTopButton.addEventListener("click", ()=>{
+  // scrollTopButton.style.cssText = "animation: 0.5s scroll-top-button linear;"
+  scrollTopButton.classList.add("scroll-top-button--clicked");
+})

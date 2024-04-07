@@ -121,6 +121,15 @@
   flex-direction: column;
   align-items: center;
   margin-right: 70px;
+  /* will-change: transform; */
+  transform: translate3d(-100px, 0, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wood.show .wood__img {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 .wood__img img {
@@ -165,6 +174,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translate3d(0, 100px, 0);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.wood.show .wood__description-container {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 .wood__description {

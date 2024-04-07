@@ -54,3 +54,27 @@ scrollTopButton.addEventListener("click", () => {
   // scrollTopButton.style.cssText = "animation: 0.5s scroll-top-button linear;"
   scrollTopButton.classList.add("scroll-top-button--clicked");
 });
+
+// Отслеживание объектов для применения анимации появления
+
+const animatedObjects = document.querySelectorAll(
+  ".wood, .wood-products, .order, .cargo-transportation"
+);
+console.log(animatedObjects);
+
+const showObjects = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // console.log("Граница пересечена");
+      entry.target.classList.add("show");
+
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const options = { threshold: 0.5 };
+
+const observer = new IntersectionObserver(showObjects, options);
+
+animatedObjects.forEach((object) => observer.observe(object));

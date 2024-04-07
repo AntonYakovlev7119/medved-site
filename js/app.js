@@ -42,7 +42,7 @@ window.addEventListener("scroll", (e) => {
     scrollTopButton.classList.add("scroll-top-button--show");
     setTimeout(() => {
       scrollTopButton.classList.remove("scroll-top-button--clicked");
-    }, 600);
+    }, 510);
   } else {
     scrollTopButton.classList.remove("scroll-top-button--show");
   }

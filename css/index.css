@@ -643,8 +643,8 @@
 /*  */
 
 .cargo-transportation {
-  padding: 40px 0 50px 0;
-  padding: 80px 0 50px 0;
+  /* padding: 80px 0 50px 0; */
+  padding: 15vh 0;
   background: var(--light);
   overflow: hidden;
   z-index: 2;
@@ -655,10 +655,7 @@
   /* height: 50vw; */
   /* max-height: 1000px; */
   /* height: 100%; */
-  min-height: 100%;
-  min-height: 50vw;
-  /* max-height: 50vw; */
-  max-height: 100%;
+
   z-index: 1;
 }
 
@@ -671,18 +668,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 50vw;
-  max-height: 1000px; */
-  /* height: 100%; */
-  width: 50%;
-  /* background: #cd9e56; */
 
+  height: 100%;
+  width: 50%;
+  margin: 15vh 0;
   z-index: 1;
 }
 
 .cargo-transportation__img {
   position: relative;
-  padding: 0 calc(50% - 20vw);
+  padding: 0px calc(100% - 45vw);
   /* margin-left: 30px; */
   /* padding: 0 30px; */
   /* margin-left: calc(var(--index) * 3); */
@@ -691,6 +686,7 @@
 
 .cargo-transportation__img img {
   display: block;
+  /* display: none; */
   /* width: 700px;
   max-width: 100%; */
   /* padding: 0 70px 0 70px; */
@@ -707,7 +703,7 @@
   width: 100%;
   /* width: auto; */
   /* top: -10%; */
-  left: -20%;
+  left: -23%;
 
   z-index: 3;
 }
@@ -720,6 +716,24 @@
 
 #transport__svg1 {
 }
+
+/* Анимация svg */
+
+.cargo-transportation__svg--show #transport-svg1 {
+  transform: translate3d(-100px, 0, 0) rotate(26deg);
+  /* transform: rotate(30deg); */
+}
+
+#transport-svg1#show {
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+#transport-svg2 {
+}
+
+#transport-svg3 {
+}
+/* ----------------- */
 
 .cargo-transportation__description {
   position: relative;

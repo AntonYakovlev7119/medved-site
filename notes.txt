@@ -157,3 +157,94 @@
                     d="M144 829.5L823.5 963.5H176.5L144 829.5Z"
                   /> -->
                 </svg>
+
+                /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.order-type-select {
+  background: var(--light-wood);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.order-type-select-container {
+  display: flex;
+  gap: 100px;
+}
+.order__type {
+  --text-color: rgb(102, 69, 19);
+  position: relative;
+  /* font-style: italic; */
+  font-family: Roboto;
+  font-size: calc(15px + 0.6vw);
+  font-weight: 500;
+  /* color: var(--dark-wood); */
+  /* color: var(--wood); */
+  color: var(--text-color);
+  /* padding: 10px; */
+  /* background: var(--light-wood); */
+  background: var(--light-wood);
+  /* box-shadow: 0 3px 15px gray; */
+  cursor: pointer;
+  z-index: 999;
+}
+
+.order__type span {
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
+  /* background: var(--light-wood); */
+}
+
+.order__type span::after,
+.order__type span::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  /* z-index: -1; */
+  transition: 0.4s ease;
+}
+
+.order__type span:hover::after,
+.order__type span:hover::before {
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+}
+
+.order__type span:hover::after {
+  /* height: 100%;
+  width: 100%; */
+  border-top: 1px solid var(--wood);
+  border-left: 1px solid var(--wood);
+}
+
+.order__type span:hover::before {
+  /* height: 100%;
+  width: 100%; */
+  border-bottom: 1px solid var(--wood);
+  border-right: 1px solid var(--wood);
+}
+
+.order__type span::after {
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 0px solid var(--wood);
+  border-left: 0px solid var(--wood);
+  transform: translate(-1px, -1px);
+  z-index: -1;
+}
+
+.order__type span::before {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 0px solid var(--wood);
+  border-right: 0px solid var(--wood);
+  transform: translate(-1px, -1px);
+  z-index: 1;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */

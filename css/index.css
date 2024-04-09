@@ -967,6 +967,7 @@
 .contacts__contact {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .contacts__contact-name {
   display: flex;
@@ -976,13 +977,14 @@
 
 .contacts__contact-name span {
   display: block;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   /* margin: 0 10px; */
   padding: 0 10px;
   border-right: 3px solid var(--red);
 }
 .contacts__svg {
   height: 80px;
+  height: calc(var(--index) * 2);
   fill: var(--wood);
 }
 
@@ -991,9 +993,9 @@
 }
 
 .contacts__contact-info {
-  color: var(--wood);
   color: var(--dark-wood);
   margin-left: 10px;
+  white-space: nowrap;
 }
 .contacts__whatsapp {
 }

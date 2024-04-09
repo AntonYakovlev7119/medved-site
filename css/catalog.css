@@ -90,6 +90,7 @@ main {
   border-radius: 7px;
   object-fit: contain;
   aspect-ratio: 1;
+  /* border-radius: 0px; */
 }
 
 .catalog__product-card-info {

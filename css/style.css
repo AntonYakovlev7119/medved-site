@@ -183,7 +183,7 @@ main.page-content {
 
 .section {
   position: relative;
-  padding: 0 150px;
+  /* padding: 0 150px; */
 }
 
 /* Кнопка прокрутки наверх */

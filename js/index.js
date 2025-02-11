@@ -22,22 +22,24 @@ document.addEventListener("mousemove", (e) => {
 
   // Отслеживание появления объектов на экране при скролле
 
-const animatedObjects = document.querySelectorAll(
-    ".wood, .wood-products, .order, .transportation"
-  );
-  
-  const showObjects = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(`${entry.target.classList[0]}--show`);
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-  
-  const options = { threshold: 0.5 };
-  
-  const observer = new IntersectionObserver(showObjects, options);
-  
-  animatedObjects.forEach((object) => observer.observe(object));
-  
+const mainAnimatedSections = document.querySelectorAll(
+  ".wood, .wood-products, .transportation"
+);
+const orderAnimatedSection = document.querySelector(".order");
+
+const showObjects = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add(`${entry.target.classList[0]}--show`);
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const mainObserver = new IntersectionObserver(showObjects, { threshold: 0.5 });
+const orderObserver = new IntersectionObserver(showObjects, {
+  threshold: 0.3,
+});
+
+mainAnimatedSections.forEach((object) => mainObserver.observe(object));
+orderObserver.observe(orderAnimatedSection);
